@@ -11,31 +11,42 @@ import Foundation
 struct PixabayNetworkService {
 	
 	let networkManager: NetworkManager
-	let networkModel: NetworkModel
-	let urlSession: URLSession
 	
 	init() {
 		let defaultParams = [URLQueryItem(name: "key", value: PixabayNetworkServiceApi.apiKey)]
 		
-		networkModel = NetworkModel(base: PixabayNetworkServiceUrl.apiBase,
+		let networkModel = NetworkModel(base: PixabayNetworkServiceUrl.apiBase,
 									path: PixabayNetworkServiceUrl.apiPath,
 									params: defaultParams,
 									headers: nil,
 									method: .get)
 		
-		urlSession = URLSession(configuration: URLSessionConfiguration.default)
+		let urlSession = URLSession(configuration: URLSessionConfiguration.default)
 		networkManager = NetworkManager(networkModel: networkModel, session: urlSession)
 	}
 	
-	func fetchData() {
-		networkManager.execute { (result) in
+	func getHits(_ completionHandler: @escaping ((Result<[Hit], Error>) -> Void)) { 
+		networkManager.execute { (result) in 
 			switch result {
 			case .success(let data):
-				print("\(data).")
+				self.decode(data: data, completionHandler: completionHandler)
 			case .failure(let error):
 				print(error.localizedDescription)
+				completionHandler(.failure(error))
 			}
 		}
+	}
+	
+	private func decode(data: Data, completionHandler: ((Result<[Hit], Error>) -> Void)) {
+		data.decode(to: PixabayHitsResponseModel.self, completionHandler: { (result) in
+			switch result {
+			case .success(let model):
+				completionHandler(.success(model.hits))
+			case .failure(let error):
+				print(error.localizedDescription)
+				completionHandler(.failure(error))
+			}
+		})
 	}
 }
 

@@ -11,7 +11,6 @@ import Foundation
 enum NetworkError: Error {
 	case badURL
 	case unknownError
-	case decodeError
 	case emptyData
 	case apiError(error: Error)
 }
@@ -23,8 +22,6 @@ extension NetworkError: LocalizedError {
 			return NSLocalizedString("Bad url", comment: "")
 		case .unknownError:
 			return NSLocalizedString("Unknown error, please try again", comment: "")
-		case .decodeError:
-			return NSLocalizedString("Error permining the HTML query", comment: "")
 		case .emptyData:
 			return NSLocalizedString("Error: did not receive data", comment: "")
 		case .apiError:

@@ -18,12 +18,15 @@
 		78D7B73F22ABB10C007D1752 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B73E22ABB10C007D1752 /* NetworkError.swift */; };
 		78D7B74622ABB27E007D1752 /* NetworkModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B74522ABB27E007D1752 /* NetworkModelProtocol.swift */; };
 		78D7B74822ABB297007D1752 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B74722ABB297007D1752 /* HTTPMethod.swift */; };
-		78D7B74E22ABC866007D1752 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B74D22ABC866007D1752 /* URLSessionProtocol.swift */; };
 		78D7B75222ABC8EB007D1752 /* NSURLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B75122ABC8EB007D1752 /* NSURLSession+Extensions.swift */; };
 		78D7B75422ABCA31007D1752 /* PixabayNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B75322ABCA31007D1752 /* PixabayNetworkService.swift */; };
 		78D7B75622ABCA8C007D1752 /* PixabayNetworkServiceConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B75522ABCA8C007D1752 /* PixabayNetworkServiceConsts.swift */; };
 		78D7B75822ABCB89007D1752 /* NetworkHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B75722ABCB89007D1752 /* NetworkHeaders.swift */; };
-		78D7B76422ABD74A007D1752 /* NetworkHeadersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B76322ABD749007D1752 /* NetworkHeadersProtocol.swift */; };
+		78D7B76A22ABF64D007D1752 /* PixabayHitsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B76922ABF64D007D1752 /* PixabayHitsResponseModel.swift */; };
+		78D7B77022AC0075007D1752 /* Data+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B76F22AC0075007D1752 /* Data+Codable.swift */; };
+		78D7B77222AC008A007D1752 /* NetworkHeadersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B77122AC008A007D1752 /* NetworkHeadersProtocol.swift */; };
+		78D7B77422AC00BB007D1752 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B77322AC00BB007D1752 /* URLSessionProtocol.swift */; };
+		78D7B77822AC0782007D1752 /* UIViewController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B77722AC0782007D1752 /* UIViewController+Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,12 +55,15 @@
 		78D7B73E22ABB10C007D1752 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		78D7B74522ABB27E007D1752 /* NetworkModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkModelProtocol.swift; path = MySampleApp/Network/Protocol/NetworkModelProtocol.swift; sourceTree = SOURCE_ROOT; };
 		78D7B74722ABB297007D1752 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		78D7B74D22ABC866007D1752 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLSessionProtocol.swift; path = ../../../../../Desktop/URLSessionProtocol.swift; sourceTree = "<group>"; };
 		78D7B75122ABC8EB007D1752 /* NSURLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSURLSession+Extensions.swift"; sourceTree = "<group>"; };
 		78D7B75322ABCA31007D1752 /* PixabayNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayNetworkService.swift; sourceTree = "<group>"; };
 		78D7B75522ABCA8C007D1752 /* PixabayNetworkServiceConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixabayNetworkServiceConsts.swift; sourceTree = "<group>"; };
 		78D7B75722ABCB89007D1752 /* NetworkHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeaders.swift; sourceTree = "<group>"; };
-		78D7B76322ABD749007D1752 /* NetworkHeadersProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHeadersProtocol.swift; path = MySampleApp/Network/Protocol/NetworkHeadersProtocol.swift; sourceTree = SOURCE_ROOT; };
+		78D7B76922ABF64D007D1752 /* PixabayHitsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayHitsResponseModel.swift; sourceTree = "<group>"; };
+		78D7B76F22AC0075007D1752 /* Data+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Codable.swift"; sourceTree = "<group>"; };
+		78D7B77122AC008A007D1752 /* NetworkHeadersProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHeadersProtocol.swift; path = MySampleApp/Network/Protocol/NetworkHeadersProtocol.swift; sourceTree = SOURCE_ROOT; };
+		78D7B77322AC00BB007D1752 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionProtocol.swift; path = MySampleApp/Network/Protocol/URLSessionProtocol.swift; sourceTree = SOURCE_ROOT; };
+		78D7B77722AC0782007D1752 /* UIViewController+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Errors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		78A344B522AA254B00AD8A17 /* MySampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				78D7B77622AC0767007D1752 /* Extensions */,
 				78D7B72C22ABA31A007D1752 /* Network */,
 				78A344B622AA254B00AD8A17 /* AppDelegate.swift */,
 				78A344B822AA254B00AD8A17 /* ViewController.swift */,
@@ -155,6 +162,7 @@
 			children = (
 				78D7B75722ABCB89007D1752 /* NetworkHeaders.swift */,
 				78D7B73622ABAF47007D1752 /* NetworkModel.swift */,
+				78D7B76922ABF64D007D1752 /* PixabayHitsResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,9 +170,9 @@
 		78D7B74022ABB17C007D1752 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				78D7B76322ABD749007D1752 /* NetworkHeadersProtocol.swift */,
+				78D7B77122AC008A007D1752 /* NetworkHeadersProtocol.swift */,
 				78D7B74522ABB27E007D1752 /* NetworkModelProtocol.swift */,
-				78D7B74D22ABC866007D1752 /* URLSessionProtocol.swift */,
+				78D7B77322AC00BB007D1752 /* URLSessionProtocol.swift */,
 			);
 			name = Protocol;
 			path = "New Group";
@@ -182,8 +190,17 @@
 			isa = PBXGroup;
 			children = (
 				78D7B75122ABC8EB007D1752 /* NSURLSession+Extensions.swift */,
+				78D7B76F22AC0075007D1752 /* Data+Codable.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		78D7B77622AC0767007D1752 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				78D7B77722AC0782007D1752 /* UIViewController+Errors.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,16 +305,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				78D7B73722ABAF47007D1752 /* NetworkModel.swift in Sources */,
+				78D7B76A22ABF64D007D1752 /* PixabayHitsResponseModel.swift in Sources */,
 				78D7B73F22ABB10C007D1752 /* NetworkError.swift in Sources */,
 				78D7B73122ABA38D007D1752 /* NetworkManager.swift in Sources */,
 				78A344B922AA254B00AD8A17 /* ViewController.swift in Sources */,
 				78D7B75822ABCB89007D1752 /* NetworkHeaders.swift in Sources */,
-				78D7B76422ABD74A007D1752 /* NetworkHeadersProtocol.swift in Sources */,
+				78D7B77222AC008A007D1752 /* NetworkHeadersProtocol.swift in Sources */,
 				78D7B74822ABB297007D1752 /* HTTPMethod.swift in Sources */,
 				78D7B75222ABC8EB007D1752 /* NSURLSession+Extensions.swift in Sources */,
 				78D7B74622ABB27E007D1752 /* NetworkModelProtocol.swift in Sources */,
 				78D7B75422ABCA31007D1752 /* PixabayNetworkService.swift in Sources */,
-				78D7B74E22ABC866007D1752 /* URLSessionProtocol.swift in Sources */,
+				78D7B77022AC0075007D1752 /* Data+Codable.swift in Sources */,
+				78D7B77422AC00BB007D1752 /* URLSessionProtocol.swift in Sources */,
+				78D7B77822AC0782007D1752 /* UIViewController+Errors.swift in Sources */,
 				78D7B75622ABCA8C007D1752 /* PixabayNetworkServiceConsts.swift in Sources */,
 				78A344B722AA254B00AD8A17 /* AppDelegate.swift in Sources */,
 			);

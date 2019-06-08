@@ -16,9 +16,15 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		networkService = PixabayNetworkService()
-		networkService?.fetchData()
+		networkService?.getHits({ [weak self] (result) in
+			switch result {
+			case .success(let models):
+				print(models)
+			case .failure(let error):
+				self?.showAlertView(title: "GetHits Error", error: error)
+			}
+		})
 	}
-
 
 }
 
