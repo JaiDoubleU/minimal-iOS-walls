@@ -27,6 +27,7 @@
 		78D7B77222AC008A007D1752 /* NetworkHeadersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B77122AC008A007D1752 /* NetworkHeadersProtocol.swift */; };
 		78D7B77422AC00BB007D1752 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B77322AC00BB007D1752 /* URLSessionProtocol.swift */; };
 		78D7B77822AC0782007D1752 /* UIViewController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B77722AC0782007D1752 /* UIViewController+Errors.swift */; };
+		78D7B77A22AC08C0007D1752 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78D7B77922AC08C0007D1752 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		78D7B77122AC008A007D1752 /* NetworkHeadersProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHeadersProtocol.swift; path = MySampleApp/Network/Protocol/NetworkHeadersProtocol.swift; sourceTree = SOURCE_ROOT; };
 		78D7B77322AC00BB007D1752 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionProtocol.swift; path = MySampleApp/Network/Protocol/URLSessionProtocol.swift; sourceTree = SOURCE_ROOT; };
 		78D7B77722AC0782007D1752 /* UIViewController+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Errors.swift"; sourceTree = "<group>"; };
+		78D7B77922AC08C0007D1752 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				78A344BD22AA255100AD8A17 /* Assets.xcassets */,
 				78A344BF22AA255100AD8A17 /* LaunchScreen.storyboard */,
 				78A344C222AA255100AD8A17 /* Info.plist */,
+				78D7B77922AC08C0007D1752 /* Localizable.strings */,
 			);
 			path = MySampleApp;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78A344C122AA255100AD8A17 /* LaunchScreen.storyboard in Resources */,
+				78D7B77A22AC08C0007D1752 /* Localizable.strings in Resources */,
 				78A344BE22AA255100AD8A17 /* Assets.xcassets in Resources */,
 				78A344BC22AA254B00AD8A17 /* Main.storyboard in Resources */,
 			);

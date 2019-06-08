@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  MySampleApp
+
+  Created by Alex Núñez on 08/06/2019.
+  Copyright © 2019 Touchsoft. All rights reserved.
+*/
+
+
+"ok" = "OK";
+"error" = "Error";
+"network_error_bad_url" = "Bad url";
+"network_error_unkown" = "Unknown error, please try again";
+"network_error_empty_data" = "Error: did not receive data";
+"network_error_api_error" = "Error: did receive an error from the API";
+
