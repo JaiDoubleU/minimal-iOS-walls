@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	var networkService: PixabayNetworkService?
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
+		networkService = PixabayNetworkService()
+		networkService?.fetchData()
 	}
 
 
