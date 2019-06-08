@@ -17,13 +17,13 @@ extension UIViewController {
 			message: message,
 			preferredStyle: .alert)
 		
-		let OKAction = UIAlertAction(title: NSLocalizedString("ok", comment: "OK"), style: .default, handler: handler)
+		let OKAction = UIAlertAction(title: LocalizableStrings.genericOk.localized, style: .default, handler: handler)
 		
 		alertController.addAction(OKAction)
 		self.present(alertController, animated: true, completion: nil)
 	}
 	
 	func showAlertView(title: String?, error: Error, handler: ((UIAlertAction) -> Swift.Void)? = nil) {
-		showAlertView(title: title ?? NSLocalizedString("error", comment: "OK"), message: error.localizedDescription)
+		showAlertView(title: title ?? LocalizableStrings.genericError.localized, message: error.localizedDescription)
 	}
 }

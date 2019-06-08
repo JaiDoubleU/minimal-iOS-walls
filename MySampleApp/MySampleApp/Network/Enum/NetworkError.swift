@@ -19,13 +19,13 @@ extension NetworkError: LocalizedError {
 	public var errorDescription: String? {
 		switch self {
 		case .badURL:
-			return NSLocalizedString("network_error_bad_url", comment:"Bad url")
+			return LocalizableStrings.badUrl.localized
 		case .unknownError:
-			return NSLocalizedString("network_error_unkown", comment:"Unknown error, please try again")
+			return LocalizableStrings.unknownError.localized
 		case .emptyData:
-			return NSLocalizedString("network_error_empty_data", comment: "Error: did not receive data")
+			return LocalizableStrings.emptyData.localized
 		case .apiError:
-			return NSLocalizedString("network_error_api_error", comment: "Error: did receive an error from the API")
+			return LocalizableStrings.apiError.localized
 		}
 	}
 }

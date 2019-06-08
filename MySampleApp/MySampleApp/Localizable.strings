@@ -10,7 +10,7 @@
 "ok" = "OK";
 "error" = "Error";
 "network_error_bad_url" = "Bad url";
-"network_error_unkown" = "Unknown error, please try again";
+"network_error_unknown" = "Unknown error, please try again";
 "network_error_empty_data" = "Error: did not receive data";
 "network_error_api_error" = "Error: did receive an error from the API";
 

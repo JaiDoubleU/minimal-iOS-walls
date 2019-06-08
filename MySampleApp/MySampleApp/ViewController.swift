@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 			case .success(let models):
 				print(models)
 			case .failure(let error):
-				self?.showAlertView(title: "GetHits Error", error: error)
+				self?.showAlertView(title: LocalizableStrings.genericError.localized, error: error)
 			}
 		})
 	}
