@@ -40,7 +40,7 @@ final internal class HitsViewController: UIViewController {
 		viewModel?.error.bind(to: self) { strongSelf, _ in
 			guard let error = strongSelf.viewModel?.error.value else { return }
 			strongSelf.showAlertView(title: nil, error: error)
-		}
+		}				
 	}
 
 }
@@ -53,7 +53,7 @@ extension HitsViewController: UICollectionViewDataSource {
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return viewModel?.listData.value.count ?? 0
+		return viewModel?.numberOfItems() ?? 0
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

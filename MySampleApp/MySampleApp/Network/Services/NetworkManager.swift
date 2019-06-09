@@ -12,10 +12,10 @@ class NetworkManager {
 
 	typealias NetworkManagerCompleteHandler = ( Result<Data, NetworkError> ) -> Void
 
-	private var networkModel: NetworkModel
+	private var networkModel: NetworkModelProtocol
 	private let session: URLSessionProtocol
 
-	required public init(networkModel: NetworkModel,
+	required public init(networkModel: NetworkModelProtocol,
 						 session: URLSessionProtocol) {
 		self.networkModel = networkModel
 		self.session = session

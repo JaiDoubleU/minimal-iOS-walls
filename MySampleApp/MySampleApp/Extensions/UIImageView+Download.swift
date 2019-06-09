@@ -22,6 +22,7 @@ extension UIImageView {
 			return
 		}
 		
+		// TODO use Dependency inyection in the future.
 		URLSession.shared.dataTask(with: url) {
 			data, response, error in
 			if let data = data {

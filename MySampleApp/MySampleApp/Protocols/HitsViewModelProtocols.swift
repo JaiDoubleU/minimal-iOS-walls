@@ -16,5 +16,7 @@ protocol HitsViewModelProtocol {
 	var listData: Observable<[Hit]> { get }
 	var error: Observable<Error?> { get }
 	var refreshing: Observable<Bool> { get }
+	
 	func fetchHits()
+	func numberOfItems() -> Int
 }
