@@ -1,0 +1,17 @@
+platform :ios, '10.0'
+project 'MySampleApp', 'AppStore' => :release
+use_frameworks!
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+target 'MySampleApp' do
+	pod 'Bond'
+	
+end
+
+post_install do |installer|
+	installer.pods_project.targets.each do |target|
+		puts "#{target.name}"
+	end
+end
+
