@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HitCollectionCellViewModelProtocol {
 	var model: Hit { get }
 	var titleText: String { get }
 	var imageUrl: String { get }
+	var placeHolderImage: UIImage? { get }
 }

@@ -12,10 +12,10 @@ let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
 	
-	func downloadImage(urlString: String){
+	func downloadImage(urlString: String, placeHolder: UIImage?) {
 		guard let url = URL(string: urlString) else { return }
 		
-		image = nil
+		image = placeHolder ?? nil
 		
 		if let imageFromCache = imageCache.object(forKey: urlString as NSString) {
 			self.image = imageFromCache

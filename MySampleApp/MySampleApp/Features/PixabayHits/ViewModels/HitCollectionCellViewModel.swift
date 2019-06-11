@@ -6,7 +6,7 @@
 //  Copyright © 2019 Touchsoft. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct HitCollectionCellViewModel: HitCollectionCellViewModelProtocol {
 	
@@ -18,6 +18,10 @@ struct HitCollectionCellViewModel: HitCollectionCellViewModelProtocol {
 	
 	var imageUrl: String {
 		return model.previewURL
+	}
+	
+	var placeHolderImage: UIImage? {
+		return UIImage(named: "imagePlaceholder")
 	}
 	
 	init(model: Hit) {

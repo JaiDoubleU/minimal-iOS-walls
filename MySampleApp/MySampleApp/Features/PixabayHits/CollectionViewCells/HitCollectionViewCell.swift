@@ -18,8 +18,8 @@ internal class HitCollectionViewCell: UICollectionViewCell {
 	
 	internal func configure(viewModel: HitCollectionCellViewModelProtocol) {
 		self.viewModel = viewModel
-		hitLabel.text = viewModel.titleText
-		hitImageView.downloadImage(urlString: viewModel.imageUrl)
+		hitLabel.text = viewModel.titleText		
+		hitImageView.downloadImage(urlString: viewModel.imageUrl, placeHolder: viewModel.placeHolderImage)
 		
 		applyTheme()
 	}
