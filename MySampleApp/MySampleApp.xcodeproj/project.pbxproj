@@ -17,11 +17,9 @@
 		786FC2E222AFA02B00112FB8 /* HitsViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2B422AFA02B00112FB8 /* HitsViewModelProtocols.swift */; };
 		786FC2E322AFA02B00112FB8 /* HitCollectionCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2B522AFA02B00112FB8 /* HitCollectionCellViewModelProtocol.swift */; };
 		786FC2E422AFA02B00112FB8 /* Data+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2B722AFA02B00112FB8 /* Data+Codable.swift */; };
-		786FC2E622AFA02B00112FB8 /* PixabayNetworkServiceConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2BC22AFA02B00112FB8 /* PixabayNetworkServiceConsts.swift */; };
 		786FC2E722AFA02B00112FB8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2BE22AFA02B00112FB8 /* HTTPMethod.swift */; };
 		786FC2E822AFA02B00112FB8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2BF22AFA02B00112FB8 /* NetworkError.swift */; };
 		786FC2E922AFA02B00112FB8 /* NetworkHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2C122AFA02B00112FB8 /* NetworkHeaders.swift */; };
-		786FC2EA22AFA02B00112FB8 /* PixabayHitsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2C222AFA02B00112FB8 /* PixabayHitsResponseModel.swift */; };
 		786FC2EB22AFA02B00112FB8 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2C322AFA02B00112FB8 /* NetworkModel.swift */; };
 		786FC2EC22AFA02B00112FB8 /* NetworkModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2C522AFA02B00112FB8 /* NetworkModelProtocol.swift */; };
 		786FC2ED22AFA02B00112FB8 /* NetworkHeadersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2C622AFA02B00112FB8 /* NetworkHeadersProtocol.swift */; };
@@ -40,6 +38,15 @@
 		786FC30822AFA37100112FB8 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC30722AFA37100112FB8 /* AppStoryboard.swift */; };
 		786FC31122AFA79400112FB8 /* ReusableIdentifying+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC30E22AFA79400112FB8 /* ReusableIdentifying+Extensions.swift */; };
 		786FC31222AFA79400112FB8 /* UIViewController+StoryboardId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC30F22AFA79400112FB8 /* UIViewController+StoryboardId.swift */; };
+		786FC31722AFA87C00112FB8 /* PixabayNetworkServiceConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC31322AFA87C00112FB8 /* PixabayNetworkServiceConsts.swift */; };
+		786FC31C22AFA89200112FB8 /* PixabayHitsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC31B22AFA89100112FB8 /* PixabayHitsResponseModel.swift */; };
+		786FC31E22AFA91D00112FB8 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC31D22AFA91D00112FB8 /* UIColor+Hex.swift */; };
+		786FC32422AFAA4300112FB8 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC32322AFAA4300112FB8 /* ThemeColor.swift */; };
+		786FC32822AFAC1400112FB8 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC32722AFAC1400112FB8 /* UIView+Shadow.swift */; };
+		786FC32A22AFAD0100112FB8 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC32922AFAD0100112FB8 /* UIView+Border.swift */; };
+		786FC32C22AFAF7F00112FB8 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC32B22AFAF7F00112FB8 /* ThemeFont.swift */; };
+		786FC33322AFB86800112FB8 /* ThemeColor+Pixabay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC33122AFB86700112FB8 /* ThemeColor+Pixabay.swift */; };
+		786FC33422AFB86800112FB8 /* ThemeFont+Pixabay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC33222AFB86700112FB8 /* ThemeFont+Pixabay.swift */; };
 		78A344B722AA254B00AD8A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A344B622AA254B00AD8A17 /* AppDelegate.swift */; };
 		78A344BC22AA254B00AD8A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BA22AA254B00AD8A17 /* Main.storyboard */; };
 		78A344BE22AA255100AD8A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BD22AA255100AD8A17 /* Assets.xcassets */; };
@@ -76,11 +83,9 @@
 		786FC2B422AFA02B00112FB8 /* HitsViewModelProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitsViewModelProtocols.swift; sourceTree = "<group>"; };
 		786FC2B522AFA02B00112FB8 /* HitCollectionCellViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitCollectionCellViewModelProtocol.swift; sourceTree = "<group>"; };
 		786FC2B722AFA02B00112FB8 /* Data+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Codable.swift"; sourceTree = "<group>"; };
-		786FC2BC22AFA02B00112FB8 /* PixabayNetworkServiceConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixabayNetworkServiceConsts.swift; sourceTree = "<group>"; };
 		786FC2BE22AFA02B00112FB8 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		786FC2BF22AFA02B00112FB8 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		786FC2C122AFA02B00112FB8 /* NetworkHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHeaders.swift; sourceTree = "<group>"; };
-		786FC2C222AFA02B00112FB8 /* PixabayHitsResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixabayHitsResponseModel.swift; sourceTree = "<group>"; };
 		786FC2C322AFA02B00112FB8 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		786FC2C522AFA02B00112FB8 /* NetworkModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModelProtocol.swift; sourceTree = "<group>"; };
 		786FC2C622AFA02B00112FB8 /* NetworkHeadersProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHeadersProtocol.swift; sourceTree = "<group>"; };
@@ -99,6 +104,15 @@
 		786FC30722AFA37100112FB8 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		786FC30E22AFA79400112FB8 /* ReusableIdentifying+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReusableIdentifying+Extensions.swift"; sourceTree = "<group>"; };
 		786FC30F22AFA79400112FB8 /* UIViewController+StoryboardId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardId.swift"; sourceTree = "<group>"; };
+		786FC31322AFA87C00112FB8 /* PixabayNetworkServiceConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixabayNetworkServiceConsts.swift; sourceTree = "<group>"; };
+		786FC31B22AFA89100112FB8 /* PixabayHitsResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixabayHitsResponseModel.swift; sourceTree = "<group>"; };
+		786FC31D22AFA91D00112FB8 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		786FC32322AFAA4300112FB8 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		786FC32722AFAC1400112FB8 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		786FC32922AFAD0100112FB8 /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
+		786FC32B22AFAF7F00112FB8 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
+		786FC33122AFB86700112FB8 /* ThemeColor+Pixabay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThemeColor+Pixabay.swift"; sourceTree = "<group>"; };
+		786FC33222AFB86700112FB8 /* ThemeFont+Pixabay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThemeFont+Pixabay.swift"; sourceTree = "<group>"; };
 		78A344B322AA254B00AD8A17 /* MySampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A344B622AA254B00AD8A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A344BB22AA254B00AD8A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,6 +169,7 @@
 		786FC2A522AFA02B00112FB8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				786FC32022AFA99000112FB8 /* Theme */,
 				786FC2CC22AFA02B00112FB8 /* Localizable */,
 				786FC2BA22AFA02B00112FB8 /* Network */,
 				786FC2B622AFA02B00112FB8 /* Parsers */,
@@ -166,12 +181,14 @@
 		786FC2A622AFA02B00112FB8 /* PixabayHits */ = {
 			isa = PBXGroup;
 			children = (
-				786FC2A722AFA02B00112FB8 /* ViewModels */,
-				786FC2AA22AFA02B00112FB8 /* Interators */,
-				786FC2AC22AFA02B00112FB8 /* Network */,
 				786FC2AE22AFA02B00112FB8 /* CollectionViewCells */,
-				786FC2B022AFA02B00112FB8 /* ViewControllers */,
+				786FC2AA22AFA02B00112FB8 /* Interators */,
+				786FC31A22AFA89100112FB8 /* Models */,
+				786FC2AC22AFA02B00112FB8 /* Network */,
 				786FC2B222AFA02B00112FB8 /* Protocols */,
+				786FC33022AFB86700112FB8 /* Theme */,
+				786FC2B022AFA02B00112FB8 /* ViewControllers */,
+				786FC2A722AFA02B00112FB8 /* ViewModels */,
 			);
 			path = PixabayHits;
 			sourceTree = "<group>";
@@ -196,6 +213,7 @@
 		786FC2AC22AFA02B00112FB8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				786FC31322AFA87C00112FB8 /* PixabayNetworkServiceConsts.swift */,
 				786FC2AD22AFA02B00112FB8 /* PixabayNetworkService.swift */,
 			);
 			path = Network;
@@ -238,7 +256,6 @@
 		786FC2BA22AFA02B00112FB8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				786FC2BB22AFA02B00112FB8 /* Constants */,
 				786FC2BD22AFA02B00112FB8 /* Enums */,
 				786FC2C022AFA02B00112FB8 /* Models */,
 				786FC2C422AFA02B00112FB8 /* Protocol */,
@@ -246,14 +263,6 @@
 				786FC2CA22AFA02B00112FB8 /* Services */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		786FC2BB22AFA02B00112FB8 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				786FC2BC22AFA02B00112FB8 /* PixabayNetworkServiceConsts.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		786FC2BD22AFA02B00112FB8 /* Enums */ = {
@@ -269,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				786FC2C122AFA02B00112FB8 /* NetworkHeaders.swift */,
-				786FC2C222AFA02B00112FB8 /* PixabayHitsResponseModel.swift */,
 				786FC2C322AFA02B00112FB8 /* NetworkModel.swift */,
 			);
 			path = Models;
@@ -342,6 +350,9 @@
 				786FC2D722AFA02B00112FB8 /* String+Localization.swift */,
 				786FC2D622AFA02B00112FB8 /* UIImageView+Download.swift */,
 				786FC2D422AFA02B00112FB8 /* UIViewController+Errors.swift */,
+				786FC31D22AFA91D00112FB8 /* UIColor+Hex.swift */,
+				786FC32722AFAC1400112FB8 /* UIView+Shadow.swift */,
+				786FC32922AFAD0100112FB8 /* UIView+Border.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,6 +407,32 @@
 				786FC30F22AFA79400112FB8 /* UIViewController+StoryboardId.swift */,
 			);
 			path = StoyboardID;
+			sourceTree = "<group>";
+		};
+		786FC31A22AFA89100112FB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				786FC31B22AFA89100112FB8 /* PixabayHitsResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		786FC32022AFA99000112FB8 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				786FC32322AFAA4300112FB8 /* ThemeColor.swift */,
+				786FC32B22AFAF7F00112FB8 /* ThemeFont.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		786FC33022AFB86700112FB8 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				786FC33122AFB86700112FB8 /* ThemeColor+Pixabay.swift */,
+				786FC33222AFB86700112FB8 /* ThemeFont+Pixabay.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		78A344AA22AA254B00AD8A17 = {
@@ -612,6 +649,7 @@
 			files = (
 				786FC2F022AFA02B00112FB8 /* NetworkManager.swift in Sources */,
 				786FC2EE22AFA02B00112FB8 /* URLSessionProtocol.swift in Sources */,
+				786FC32A22AFAD0100112FB8 /* UIView+Border.swift in Sources */,
 				786FC2F822AFA02B00112FB8 /* CoordinatorProtocol.swift in Sources */,
 				786FC2E422AFA02B00112FB8 /* Data+Codable.swift in Sources */,
 				786FC2E722AFA02B00112FB8 /* HTTPMethod.swift in Sources */,
@@ -629,19 +667,25 @@
 				786FC2F922AFA02B00112FB8 /* ReuseIdentifying.swift in Sources */,
 				786FC31222AFA79400112FB8 /* UIViewController+StoryboardId.swift in Sources */,
 				786FC2E222AFA02B00112FB8 /* HitsViewModelProtocols.swift in Sources */,
-				786FC2EA22AFA02B00112FB8 /* PixabayHitsResponseModel.swift in Sources */,
+				786FC31C22AFA89200112FB8 /* PixabayHitsResponseModel.swift in Sources */,
 				786FC2DF22AFA02B00112FB8 /* HitCollectionViewCell.swift in Sources */,
+				786FC31E22AFA91D00112FB8 /* UIColor+Hex.swift in Sources */,
 				78A344B722AA254B00AD8A17 /* AppDelegate.swift in Sources */,
 				786FC2ED22AFA02B00112FB8 /* NetworkHeadersProtocol.swift in Sources */,
 				786FC2FE22AFA0EE00112FB8 /* AppCoordinator.swift in Sources */,
 				786FC2E822AFA02B00112FB8 /* NetworkError.swift in Sources */,
 				786FC2F322AFA02B00112FB8 /* LocalizableProtocol.swift in Sources */,
+				786FC33422AFB86800112FB8 /* ThemeFont+Pixabay.swift in Sources */,
+				786FC32822AFAC1400112FB8 /* UIView+Shadow.swift in Sources */,
+				786FC31722AFA87C00112FB8 /* PixabayNetworkServiceConsts.swift in Sources */,
+				786FC33322AFB86800112FB8 /* ThemeColor+Pixabay.swift in Sources */,
 				786FC2EB22AFA02B00112FB8 /* NetworkModel.swift in Sources */,
 				786FC2E322AFA02B00112FB8 /* HitCollectionCellViewModelProtocol.swift in Sources */,
 				786FC2DD22AFA02B00112FB8 /* HitsIterators.swift in Sources */,
-				786FC2E622AFA02B00112FB8 /* PixabayNetworkServiceConsts.swift in Sources */,
 				786FC2E022AFA02B00112FB8 /* HitsViewController.swift in Sources */,
 				786FC2F422AFA02B00112FB8 /* UIViewController+Errors.swift in Sources */,
+				786FC32C22AFAF7F00112FB8 /* ThemeFont.swift in Sources */,
+				786FC32422AFAA4300112FB8 /* ThemeColor.swift in Sources */,
 				786FC2DE22AFA02B00112FB8 /* PixabayNetworkService.swift in Sources */,
 				786FC2EC22AFA02B00112FB8 /* NetworkModelProtocol.swift in Sources */,
 			);

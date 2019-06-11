@@ -9,17 +9,25 @@
 import Foundation
 import UIKit
 
-class HitCollectionViewCell: UICollectionViewCell {
+internal class HitCollectionViewCell: UICollectionViewCell {
 	
 	@IBOutlet weak var hitImageView: UIImageView!
 	@IBOutlet weak var hitLabel: UILabel!
 	
 	private (set) var viewModel: HitCollectionCellViewModelProtocol?
 	
-	func configure(viewModel: HitCollectionCellViewModelProtocol) {
+	internal func configure(viewModel: HitCollectionCellViewModelProtocol) {
 		self.viewModel = viewModel
 		hitLabel.text = viewModel.titleText
 		hitImageView.downloadImage(urlString: viewModel.imageUrl)
+		
+		applyTheme()
+	}
+	
+	private func applyTheme() {
+		hitLabel.textColor = Color.darkText.value
+		hitLabel.font = Font.normal(bold: true).value
+		hitImageView.applyShadow()
 	}
 	
 }

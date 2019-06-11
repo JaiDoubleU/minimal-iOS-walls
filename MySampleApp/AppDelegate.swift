@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		appCoordinator = AppCoordinator(window)
 		appCoordinator?.start()
 		window?.makeKeyAndVisible()
-		
+				
 		return true
 	}
 
