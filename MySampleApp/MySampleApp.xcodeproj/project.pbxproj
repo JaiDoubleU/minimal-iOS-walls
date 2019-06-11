@@ -50,6 +50,8 @@
 		786FC33822AFF52C00112FB8 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC33722AFF52C00112FB8 /* UIView+Animations.swift */; };
 		786FC33A22AFF70700112FB8 /* PixabayNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC33922AFF70700112FB8 /* PixabayNetworkServiceProtocol.swift */; };
 		786FC33C22AFFA7A00112FB8 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC33B22AFFA7A00112FB8 /* UIImageView+Animations.swift */; };
+		786FC33E22AFFB5900112FB8 /* ThemeManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC33D22AFFB5900112FB8 /* ThemeManager+Extensions.swift */; };
+		786FC34222AFFCF700112FB8 /* ThemeManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC34122AFFCF600112FB8 /* ThemeManagerProtocol.swift */; };
 		78A344B722AA254B00AD8A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A344B622AA254B00AD8A17 /* AppDelegate.swift */; };
 		78A344BC22AA254B00AD8A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BA22AA254B00AD8A17 /* Main.storyboard */; };
 		78A344BE22AA255100AD8A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BD22AA255100AD8A17 /* Assets.xcassets */; };
@@ -119,6 +121,8 @@
 		786FC33722AFF52C00112FB8 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		786FC33922AFF70700112FB8 /* PixabayNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayNetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		786FC33B22AFFA7A00112FB8 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
+		786FC33D22AFFB5900112FB8 /* ThemeManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThemeManager+Extensions.swift"; sourceTree = "<group>"; };
+		786FC34122AFFCF600112FB8 /* ThemeManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManagerProtocol.swift; sourceTree = "<group>"; };
 		78A344B322AA254B00AD8A17 /* MySampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A344B622AA254B00AD8A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A344BB22AA254B00AD8A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -407,6 +411,7 @@
 			children = (
 				786FC32322AFAA4300112FB8 /* ThemeColor.swift */,
 				786FC32B22AFAF7F00112FB8 /* ThemeFont.swift */,
+				786FC34122AFFCF600112FB8 /* ThemeManagerProtocol.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 			children = (
 				786FC33122AFB86700112FB8 /* ThemeColor+Pixabay.swift */,
 				786FC33222AFB86700112FB8 /* ThemeFont+Pixabay.swift */,
+				786FC33D22AFFB5900112FB8 /* ThemeManager+Extensions.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -657,6 +663,7 @@
 				786FC2DF22AFA02B00112FB8 /* HitCollectionViewCell.swift in Sources */,
 				786FC31E22AFA91D00112FB8 /* UIColor+Hex.swift in Sources */,
 				78A344B722AA254B00AD8A17 /* AppDelegate.swift in Sources */,
+				786FC33E22AFFB5900112FB8 /* ThemeManager+Extensions.swift in Sources */,
 				786FC2ED22AFA02B00112FB8 /* NetworkHeadersProtocol.swift in Sources */,
 				786FC2FE22AFA0EE00112FB8 /* AppCoordinator.swift in Sources */,
 				786FC2E822AFA02B00112FB8 /* NetworkError.swift in Sources */,
@@ -668,6 +675,7 @@
 				786FC33322AFB86800112FB8 /* ThemeColor+Pixabay.swift in Sources */,
 				786FC2EB22AFA02B00112FB8 /* NetworkModel.swift in Sources */,
 				786FC2E322AFA02B00112FB8 /* HitCollectionCellViewModelProtocol.swift in Sources */,
+				786FC34222AFFCF700112FB8 /* ThemeManagerProtocol.swift in Sources */,
 				786FC2E022AFA02B00112FB8 /* HitsViewController.swift in Sources */,
 				786FC2F422AFA02B00112FB8 /* UIViewController+Errors.swift in Sources */,
 				786FC33622AFC6CD00112FB8 /* HitsIterator.swift in Sources */,

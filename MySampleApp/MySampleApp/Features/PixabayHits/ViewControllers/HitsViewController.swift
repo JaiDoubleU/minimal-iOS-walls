@@ -18,16 +18,11 @@ final internal class HitsViewController: UIViewController {
 		super.viewDidLoad()
 		
 		setupBond()
-		setupCollectionView()
-		
 		viewModel?.fetchHits()
 	}
 	
-	func setupCollectionView() {
-	}
-	
 	func updateUI() {
-		self.hitsCollectionView.reloadData() // TODO improve this in the next version
+		hitsCollectionView.reloadData() // TODO improve this in the next version
 	}
 	
 	func setupBond() {

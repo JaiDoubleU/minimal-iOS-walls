@@ -13,6 +13,7 @@ protocol HitsViewModelProtocol {
 	var interactor: HitsInteractorProtocol { get }
 	var coordinator: CoordinatorProtocol { get }
 	
+	var title: String { get }
 	var listData: Observable<[Hit]> { get }
 	var error: Observable<Error?> { get }
 	var refreshing: Observable<Bool> { get }

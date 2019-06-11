@@ -21,6 +21,9 @@ final class AppCoordinator: CoordinatorProtocol {
 	}
 	
 	func start() {
+		// App theme
+		ThemeManager.applyTheme()
+		
 		guard let hitsViewController = HitsViewController.instantiateFromAppStoryboard(appStoryboard: AppStoryboard.main) else { return }
 		
 		let navigationController = UINavigationController(rootViewController: hitsViewController)

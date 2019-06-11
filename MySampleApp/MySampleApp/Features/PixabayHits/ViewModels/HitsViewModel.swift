@@ -23,6 +23,10 @@ final class HitsViewModel: HitsViewModelProtocol {
 		self.coordinator = coordinator
 	}
 	
+	var title: String {
+		return "Pixabay Hits"
+	}
+	
 	func fetchHits() {
 		interactor.fetchHits({ [weak self] (result) in
 			switch result {
