@@ -18,18 +18,18 @@ extension UIImageView {
 		image = placeHolder ?? nil
 		
 		if let imageFromCache = imageCache.object(forKey: urlString as NSString) {
-			self.image = imageFromCache
+			animateTransition(to: imageFromCache)
 			return
 		}
 		
 		// TODO use Dependency inyection in the future.
 		URLSession.shared.dataTask(with: url) {
-			data, response, error in
+			[weak self] data, response, error in
 			if let data = data {
 				DispatchQueue.main.async {
 					if let imageToCache = UIImage(data: data) {
 						imageCache.setObject(imageToCache, forKey: urlString as NSString)
-						self.image = imageToCache
+						self?.animateTransition(to: imageToCache)
 					}
 				}
 			}

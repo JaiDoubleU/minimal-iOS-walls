@@ -16,12 +16,11 @@ internal class HitCollectionViewCell: UICollectionViewCell {
 	
 	private (set) var viewModel: HitCollectionCellViewModelProtocol?
 	
-	internal func configure(viewModel: HitCollectionCellViewModelProtocol) {
-		self.viewModel = viewModel
-		hitLabel.text = viewModel.titleText		
-		hitImageView.downloadImage(urlString: viewModel.imageUrl, placeHolder: viewModel.placeHolderImage)
+	override func awakeFromNib() {
+		super.awakeFromNib()
 		
 		applyTheme()
+		setupGestures()
 	}
 	
 	private func applyTheme() {
@@ -30,6 +29,23 @@ internal class HitCollectionViewCell: UICollectionViewCell {
 		hitImageView.applyShadow()
 	}
 	
+	private func setupGestures() {
+		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hitImageViewTapped(tapGestureRecognizer:)))
+		hitImageView.isUserInteractionEnabled = true
+		hitImageView.addGestureRecognizer(tapGestureRecognizer)
+	}
+	
+	internal func configure(viewModel: HitCollectionCellViewModelProtocol) {
+		self.viewModel = viewModel
+		hitLabel.text = viewModel.titleText
+		hitImageView.downloadImage(urlString: viewModel.imageUrl, placeHolder: viewModel.placeHolderImage)
+	}
+	
+	@objc private func hitImageViewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+		if let tappedImage = tapGestureRecognizer.view as? UIImageView {
+			tappedImage.shake()
+		}
+	}
 }
 
 extension HitCollectionViewCell: ReuseIdentifying {		

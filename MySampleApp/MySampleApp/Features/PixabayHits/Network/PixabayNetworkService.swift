@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct PixabayNetworkService {
+
+struct PixabayNetworkService: PixabayNetworkServiceProtocol {
 	
 	let networkManager: NetworkManager
 	
@@ -25,6 +26,10 @@ struct PixabayNetworkService {
 		networkManager = NetworkManager(networkModel: networkModel, session: urlSession)
 	}
 	
+	init(networkManager: NetworkManager) {
+		self.networkManager = networkManager
+	}
+	
 	func getHits(_ completionHandler: @escaping ((Result<[Hit], Error>) -> Void)) { 
 		networkManager.execute { (result) in 
 			switch result {
@@ -37,8 +42,8 @@ struct PixabayNetworkService {
 		}
 	}
 	
-	private func decode(data: Data, completionHandler: ((Result<[Hit], Error>) -> Void)) {
-		data.decode(to: PixabayHitsResponseModel.self, completionHandler: { (result) in
+	internal func decode(data: Data, completionHandler: ((Result<[Hit], Error>) -> Void)) {
+		data.decodeJSON(to: PixabayHitsResponseModel.self, completionHandler: { (result) in
 			switch result {
 			case .success(let model):
 				completionHandler(.success(model.hits))

@@ -1,5 +1,5 @@
 //
-//  HitsViewModelProtocols.swift
+//  HitsViewModelProtocol.swift
 //  MySampleApp
 //
 //  Created by Alex Núñez on 09/06/2019.
