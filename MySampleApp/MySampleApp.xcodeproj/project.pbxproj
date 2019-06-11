@@ -32,12 +32,14 @@
 		786FC2F222AFA02B00112FB8 /* Localizable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D022AFA02B00112FB8 /* Localizable+Extensions.swift */; };
 		786FC2F322AFA02B00112FB8 /* LocalizableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D222AFA02B00112FB8 /* LocalizableProtocol.swift */; };
 		786FC2F422AFA02B00112FB8 /* UIViewController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D422AFA02B00112FB8 /* UIViewController+Errors.swift */; };
-		786FC2F522AFA02B00112FB8 /* ReusableIdentifying+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D522AFA02B00112FB8 /* ReusableIdentifying+Extensions.swift */; };
 		786FC2F622AFA02B00112FB8 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D622AFA02B00112FB8 /* UIImageView+Download.swift */; };
 		786FC2F722AFA02B00112FB8 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D722AFA02B00112FB8 /* String+Localization.swift */; };
 		786FC2F822AFA02B00112FB8 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D922AFA02B00112FB8 /* CoordinatorProtocol.swift */; };
 		786FC2F922AFA02B00112FB8 /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2DA22AFA02B00112FB8 /* ReuseIdentifying.swift */; };
 		786FC2FE22AFA0EE00112FB8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2FD22AFA0ED00112FB8 /* AppCoordinator.swift */; };
+		786FC30822AFA37100112FB8 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC30722AFA37100112FB8 /* AppStoryboard.swift */; };
+		786FC31122AFA79400112FB8 /* ReusableIdentifying+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC30E22AFA79400112FB8 /* ReusableIdentifying+Extensions.swift */; };
+		786FC31222AFA79400112FB8 /* UIViewController+StoryboardId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC30F22AFA79400112FB8 /* UIViewController+StoryboardId.swift */; };
 		78A344B722AA254B00AD8A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A344B622AA254B00AD8A17 /* AppDelegate.swift */; };
 		78A344BC22AA254B00AD8A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BA22AA254B00AD8A17 /* Main.storyboard */; };
 		78A344BE22AA255100AD8A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BD22AA255100AD8A17 /* Assets.xcassets */; };
@@ -89,12 +91,14 @@
 		786FC2D022AFA02B00112FB8 /* Localizable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Localizable+Extensions.swift"; sourceTree = "<group>"; };
 		786FC2D222AFA02B00112FB8 /* LocalizableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableProtocol.swift; sourceTree = "<group>"; };
 		786FC2D422AFA02B00112FB8 /* UIViewController+Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Errors.swift"; sourceTree = "<group>"; };
-		786FC2D522AFA02B00112FB8 /* ReusableIdentifying+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReusableIdentifying+Extensions.swift"; sourceTree = "<group>"; };
 		786FC2D622AFA02B00112FB8 /* UIImageView+Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
 		786FC2D722AFA02B00112FB8 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		786FC2D922AFA02B00112FB8 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		786FC2DA22AFA02B00112FB8 /* ReuseIdentifying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseIdentifying.swift; sourceTree = "<group>"; };
 		786FC2FD22AFA0ED00112FB8 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		786FC30722AFA37100112FB8 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		786FC30E22AFA79400112FB8 /* ReusableIdentifying+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReusableIdentifying+Extensions.swift"; sourceTree = "<group>"; };
+		786FC30F22AFA79400112FB8 /* UIViewController+StoryboardId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardId.swift"; sourceTree = "<group>"; };
 		78A344B322AA254B00AD8A17 /* MySampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A344B622AA254B00AD8A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A344BB22AA254B00AD8A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -334,10 +338,10 @@
 		786FC2D322AFA02B00112FB8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				786FC2D422AFA02B00112FB8 /* UIViewController+Errors.swift */,
-				786FC2D522AFA02B00112FB8 /* ReusableIdentifying+Extensions.swift */,
-				786FC2D622AFA02B00112FB8 /* UIImageView+Download.swift */,
+				786FC30C22AFA79400112FB8 /* StoyboardID */,
 				786FC2D722AFA02B00112FB8 /* String+Localization.swift */,
+				786FC2D622AFA02B00112FB8 /* UIImageView+Download.swift */,
+				786FC2D422AFA02B00112FB8 /* UIViewController+Errors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -377,6 +381,23 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		786FC30622AFA35E00112FB8 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				786FC30722AFA37100112FB8 /* AppStoryboard.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		786FC30C22AFA79400112FB8 /* StoyboardID */ = {
+			isa = PBXGroup;
+			children = (
+				786FC30E22AFA79400112FB8 /* ReusableIdentifying+Extensions.swift */,
+				786FC30F22AFA79400112FB8 /* UIViewController+StoryboardId.swift */,
+			);
+			path = StoyboardID;
+			sourceTree = "<group>";
+		};
 		78A344AA22AA254B00AD8A17 = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +423,7 @@
 		78A344B522AA254B00AD8A17 /* MySampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				786FC30622AFA35E00112FB8 /* Enums */,
 				786FC2FC22AFA0ED00112FB8 /* Coordinators */,
 				786FC2D322AFA02B00112FB8 /* Extensions */,
 				786FC2A522AFA02B00112FB8 /* Features */,
@@ -602,7 +624,10 @@
 				786FC2F222AFA02B00112FB8 /* Localizable+Extensions.swift in Sources */,
 				786FC2E922AFA02B00112FB8 /* NetworkHeaders.swift in Sources */,
 				786FC2DC22AFA02B00112FB8 /* HitCollectionCellViewModel.swift in Sources */,
+				786FC30822AFA37100112FB8 /* AppStoryboard.swift in Sources */,
+				786FC31122AFA79400112FB8 /* ReusableIdentifying+Extensions.swift in Sources */,
 				786FC2F922AFA02B00112FB8 /* ReuseIdentifying.swift in Sources */,
+				786FC31222AFA79400112FB8 /* UIViewController+StoryboardId.swift in Sources */,
 				786FC2E222AFA02B00112FB8 /* HitsViewModelProtocols.swift in Sources */,
 				786FC2EA22AFA02B00112FB8 /* PixabayHitsResponseModel.swift in Sources */,
 				786FC2DF22AFA02B00112FB8 /* HitCollectionViewCell.swift in Sources */,
@@ -611,7 +636,6 @@
 				786FC2FE22AFA0EE00112FB8 /* AppCoordinator.swift in Sources */,
 				786FC2E822AFA02B00112FB8 /* NetworkError.swift in Sources */,
 				786FC2F322AFA02B00112FB8 /* LocalizableProtocol.swift in Sources */,
-				786FC2F522AFA02B00112FB8 /* ReusableIdentifying+Extensions.swift in Sources */,
 				786FC2EB22AFA02B00112FB8 /* NetworkModel.swift in Sources */,
 				786FC2E322AFA02B00112FB8 /* HitCollectionCellViewModelProtocol.swift in Sources */,
 				786FC2DD22AFA02B00112FB8 /* HitsIterators.swift in Sources */,

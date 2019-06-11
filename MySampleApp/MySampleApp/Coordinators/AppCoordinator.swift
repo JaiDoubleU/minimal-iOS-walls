@@ -21,9 +21,7 @@ final class AppCoordinator: CoordinatorProtocol {
 	}
 	
 	func start() {
-		// initial vc
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		guard let hitsViewController = storyboard.instantiateViewController(withIdentifier: "HitsViewController") as?  HitsViewController else { return }
+		guard let hitsViewController = HitsViewController.instantiateFromAppStoryboard(appStoryboard: AppStoryboard.main) else { return }
 		
 		let navigationController = UINavigationController(rootViewController: hitsViewController)
 		let iterator = HitsInteractor()
