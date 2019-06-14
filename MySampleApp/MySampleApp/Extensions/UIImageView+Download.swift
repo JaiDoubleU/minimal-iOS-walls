@@ -8,11 +8,14 @@
 
 import UIKit
 
+// NSCache this is just for tis basic app. for a real app we should have a better approach
 let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
 	
-	func downloadImage(urlString: String, placeHolder: UIImage?) {
+	func downloadImage(urlSession: URLSessionProtocol = URLSession(configuration: URLSessionConfiguration.default),
+					   urlString: String,
+					   placeHolder: UIImage?) {
 		guard let url = URL(string: urlString) else { return }
 		
 		image = placeHolder ?? nil
@@ -22,9 +25,7 @@ extension UIImageView {
 			return
 		}
 		
-		// TODO use Dependency inyection in the future.
-		URLSession.shared.dataTask(with: url) {
-			[weak self] data, response, error in
+		urlSession.dataTask(with: URLRequest(url: url)) { [weak self] (data, response, error) in
 			if let data = data {
 				DispatchQueue.main.async {
 					if let imageToCache = UIImage(data: data) {
