@@ -24,13 +24,11 @@ final class AppCoordinator: CoordinatorProtocol {
 		// App theme
 		ThemeManager.applyTheme()
 		
-		guard let hitsViewController = HitsViewController.instantiateFromAppStoryboard(appStoryboard: AppStoryboard.main) else { return }
-		
+		guard let hitsViewController = HitsViewController.instantiateFromAppStoryboard(appStoryboard: AppStoryboard.main) else { return }		
 		let navigationController = UINavigationController(rootViewController: hitsViewController)
 		let iterator = HitsInteractor()
 		let viewModel = HitsViewModel(interactor: iterator, coordinator: self)
 		hitsViewController.viewModel = viewModel
-		
 		window.rootViewController = navigationController
 	}
 	

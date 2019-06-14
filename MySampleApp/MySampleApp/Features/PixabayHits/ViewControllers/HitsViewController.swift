@@ -17,12 +17,14 @@ final internal class HitsViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		
+		self.title = viewModel?.title
 		setupBond()
 		viewModel?.fetchHits()
 	}
 	
 	func updateUI() {
-		hitsCollectionView.reloadData() // TODO improve this in the next version
+		hitsCollectionView.reloadData()
 	}
 	
 	func setupBond() {
@@ -37,7 +39,6 @@ final internal class HitsViewController: UIViewController {
 			strongSelf.showAlertView(title: nil, error: error)
 		}				
 	}
-
 }
 
 // MARK: UICollectionViewDataSource

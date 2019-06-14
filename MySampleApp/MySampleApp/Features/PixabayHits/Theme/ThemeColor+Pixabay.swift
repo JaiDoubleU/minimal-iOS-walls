@@ -21,7 +21,7 @@ extension Color {
 		case .shadow:
 			instanceColor = UIColor(hexString: "#cccccc")
 		case .darkBackground:
-			instanceColor = UIColor(hexString: "#999966")
+			instanceColor = UIColor(hexString: "#212E53")
 		case .lightBackground:
 			instanceColor = UIColor(hexString: "#cccc66")
 		case .intermidiateBackground:

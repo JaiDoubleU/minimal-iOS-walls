@@ -14,11 +14,11 @@ struct ThemeManager: ThemeManagerProtocol {
 		setupNavigationBar()
 	}
 	
-	static func setupNavigationBar() {
+	static internal func setupNavigationBar() {
 		// Navigation bar
-		UINavigationBar.appearance().barStyle = UIBarStyle.default
-		UINavigationBar.appearance().tintColor = Color.darkBackground.value
-		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : Color.lightText.value, NSAttributedString.Key.font: Font.large(bold: true)]
+		UINavigationBar.appearance().barTintColor = Color.darkBackground.value
+		UINavigationBar.appearance().tintColor = Color.lightText.value
+		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.lightText.value]
 		UINavigationBar.appearance().isTranslucent = false
 	}
 	
