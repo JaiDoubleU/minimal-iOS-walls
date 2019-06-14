@@ -8,11 +8,17 @@
 
 import Foundation
 
-enum NetworkError: Error {
+enum NetworkError: Error {	
 	case badURL
 	case unknownError
 	case emptyData
 	case apiError(error: Error)
+}
+
+extension NetworkError: Equatable {
+	static func == (lhs: NetworkError, rhs: NetworkError) -> Bool {
+		return lhs.errorDescription == rhs.errorDescription
+	}
 }
 
 extension NetworkError: LocalizedError {

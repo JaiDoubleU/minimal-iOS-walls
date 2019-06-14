@@ -33,7 +33,7 @@ final class AppCoordinator: CoordinatorProtocol {
 	}
 	
 	func finish() {
-		// Do something (the app is very small but I would probably use this method very soon, temporally breaking SOLID principle
+		// Do something here (the app is very small but I would probably use this method very soon, temporally breaking a SOLID principle
 	}
 
 }

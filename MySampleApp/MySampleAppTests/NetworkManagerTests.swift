@@ -36,7 +36,7 @@ class NetworkManagerTests: XCTestCase {
 		networkManager = nil
 	}
 	
-	func test_execute_withURL_shouldHaveSessionUURL() {
+	func test_execute_withURL_shouldHaveSessionURL() {
 		guard let url = URL(string: "https://pixabay.com/api/") else {
 			fatalError("URL can't be empty")
 		}

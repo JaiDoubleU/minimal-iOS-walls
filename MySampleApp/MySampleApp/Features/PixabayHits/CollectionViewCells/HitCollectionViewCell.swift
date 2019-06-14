@@ -38,7 +38,7 @@ internal class HitCollectionViewCell: UICollectionViewCell {
 	internal func configure(viewModel: HitCollectionCellViewModelProtocol) {
 		self.viewModel = viewModel
 		hitLabel.text = viewModel.titleText
-		hitImageView.downloadImage(urlString: viewModel.imageUrl, placeHolder: viewModel.placeHolderImage)
+		hitImageView.downloadImage(urlString: viewModel.imageUrl, placeHolder: viewModel.placeHolderImage, completionHandler: nil)
 	}
 	
 	@objc private func hitImageViewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
