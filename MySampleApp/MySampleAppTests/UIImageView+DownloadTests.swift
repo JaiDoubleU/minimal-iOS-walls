@@ -30,7 +30,7 @@ class UIImageViewDownloadTests: XCTestCase {
 	}
 	
 	func test_downloadImage_withEmptyURL_shouldReturnError() {
-		let expectation = XCTestExpectation(description: "Should get bad error")
+		let expectation = XCTestExpectation(description: "Should get bad url error")
 		
 		imageView.downloadImage(urlSession: session, urlString: "") { (result) in
 			switch result {
@@ -49,7 +49,7 @@ class UIImageViewDownloadTests: XCTestCase {
 	}
 	
 	func test_downloadImage_withBadURL_shouldReturnError() {
-		let expectation = XCTestExpectation(description: "Should get bad error")
+		let expectation = XCTestExpectation(description: "Should get bad url error")
 		
 		imageView.downloadImage(urlSession: session, urlString: "((\\w)*|([0-9]") { (result) in
 			switch result {

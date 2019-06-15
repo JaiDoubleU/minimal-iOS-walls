@@ -8,8 +8,7 @@
 
 import Foundation
 
-class NetworkManager {
-
+class NetworkManager: NetworkManagerProtocol {
 	typealias NetworkManagerCompleteHandler = ( Result<Data, NetworkError> ) -> Void
 
 	private var networkModel: NetworkModelProtocol
@@ -22,7 +21,6 @@ class NetworkManager {
 	}
 
 	func execute(completionHandler: @escaping NetworkManagerCompleteHandler) {
-		
 		// creating the url components
 		var urlComponnents = URLComponents(string: networkModel.base)
 		
@@ -49,7 +47,7 @@ class NetworkManager {
 		task.resume()
 	}
 
-	private func handleServerResponse(data: Data?, response: URLResponse?, error: Error?, completionHandler: NetworkManagerCompleteHandler) {
+	internal func handleServerResponse(data: Data?, response: URLResponse?, error: Error?, completionHandler: NetworkManagerCompleteHandler) {
 		// Response
 		if let response = response {
 			print(response) // for debugging proposes

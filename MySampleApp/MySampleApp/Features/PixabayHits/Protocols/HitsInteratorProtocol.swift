@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HitsInteractorProtocol {
-	func fetchHits(_ completionBlock: @escaping (Result<[Hit], Error>) -> Void)
+	func fetchHits(_ completionBlock: @escaping (Result<[Hit], NetworkError>) -> Void)
 }

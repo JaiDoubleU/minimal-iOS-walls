@@ -16,7 +16,7 @@ struct HitsInteractor: HitsInteractorProtocol {
 		self.dataService = dataService
 	}
 	
-	func fetchHits(_ completionBlock: @escaping (Result<[Hit], Error>) -> Void) {
+	func fetchHits(_ completionBlock: @escaping (Result<[Hit], NetworkError>) -> Void) {
 		dataService.getHits(completionBlock)
 	}
 }

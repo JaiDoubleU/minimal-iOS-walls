@@ -14,18 +14,18 @@ import XCTest
 class NetworkManagerTests: XCTestCase {
 	
 	var session: MockURLSession!
-	var networkModel: MockNetworkModel!
+	var networkModel: NetworkModel!
 	var networkManager: NetworkManager!
 	
 	override func setUp() {
 		super.setUp()
 		
 		session = MockURLSession()
-		networkModel = MockNetworkModel(base: PixabayNetworkServiceUrl.apiBase,
-										path: PixabayNetworkServiceUrl.apiPath,
-										params: nil,
-										headers: nil,
-										method: .get)
+		networkModel = NetworkModel(base: PixabayNetworkServiceUrl.apiBase,
+									path: PixabayNetworkServiceUrl.apiPath,
+									params: nil,
+									headers: nil,
+									method: .get)
 		networkManager = NetworkManager(networkModel: networkModel, session: session)
 	}
 	
@@ -47,15 +47,48 @@ class NetworkManagerTests: XCTestCase {
 		XCTAssert(session.lastURL == url)
 	}
 	
-	func test_execute_withNoData_shouldReturnError() {
+	func test_execute_withBadURL_shouldReturnError() {
 		let expectation = XCTestExpectation(description: "Get request")
+
+		// specific network model with bad URL
+		networkModel = NetworkModel(base: "((\\w)*|([0-9]",
+									path: PixabayNetworkServiceUrl.apiPath,
+									params: nil,
+									headers: nil,
+									method: .get)
+		networkManager = NetworkManager(networkModel: networkModel, session: session)
+
+		networkManager.execute { (result) in
+			switch result {
+			case .success(let data):
+				XCTAssertNotNil(data, "We shouldn't get an data")
+			case .failure(let error):
+				if error == NetworkError.badURL {
+					expectation.fulfill()
+				} else {
+					XCTFail("The error is different from empty data")
+				}
+			}
+		}
+		
+		wait(for: [expectation], timeout: 3.0)
+	}
+	
+	func test_execute_withNoData_shouldReturnError() {
+		let expectation = XCTestExpectation(description: "Should get bad url error")
+		
+		session.nextData = nil
 		
 		networkManager.execute { (result) in
 			switch result {
-			case .failure( _):
-				expectation.fulfill()
 			case .success(let data):
 				XCTAssertNotNil(data, "We shouldn't get an data")
+			case .failure(let error):
+				if error == NetworkError.emptyData {
+					expectation.fulfill()
+				} else {
+					XCTFail("The error is different to bad URL")
+				}
 			}
 		}
 		
@@ -80,11 +113,33 @@ class NetworkManagerTests: XCTestCase {
 		
 		networkManager.execute { (result) in
 			switch result {
-			case .failure( _):
-				XCTFail("There is an error whilst downloading data")
 			case .success(let data):
 				XCTAssertNotNil(data)
 				expectation.fulfill()
+			case .failure( _):
+				XCTFail("There is an error whilst downloading data")
+			}
+		}
+		
+		wait(for: [expectation], timeout: 3.0)
+	}
+	
+	func test_execute_withServerError_shouldReturnError() {
+		session.nextError = NetworkError.apiError(error: NetworkError.unknownError)
+		
+		let expectation = XCTestExpectation(description: "Get request")
+		
+		networkManager.execute { (result) in
+			switch result {
+			case .success(let data):
+				XCTAssertNotNil(data)
+				expectation.fulfill()
+			case .failure(let error ):
+				if error == NetworkError.apiError(error: NetworkError.unknownError) {
+					expectation.fulfill()
+				} else {
+					XCTFail("The error is different to API Error")
+				}
 			}
 		}
 		

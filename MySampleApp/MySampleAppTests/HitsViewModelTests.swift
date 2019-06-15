@@ -14,7 +14,7 @@ import XCTest
 class HitsViewModelTests: XCTestCase {
 	
 	var session: MockURLSession!
-	var networkModel: MockNetworkModel!
+	var networkModel: NetworkModel!
 	var networkManager: NetworkManager!
 	var pixaBayNetworkService: PixabayNetworkService!
 	var hitsIterator: HitsInteractor!
@@ -25,13 +25,12 @@ class HitsViewModelTests: XCTestCase {
 		super.setUp()
 		
 		session = MockURLSession()
-		networkModel = MockNetworkModel(base: PixabayNetworkServiceUrl.apiBase,
-										path: PixabayNetworkServiceUrl.apiPath,
-										params: nil,
-										headers: nil,
-										method: .get)
+		networkModel = NetworkModel(base: PixabayNetworkServiceUrl.apiBase,
+									path: PixabayNetworkServiceUrl.apiPath,
+									params: nil,
+									headers: nil,
+									method: .get)
 		networkManager = NetworkManager(networkModel: networkModel, session: session)
-		
 		
 		pixaBayNetworkService = PixabayNetworkService(networkManager: networkManager)
 		
