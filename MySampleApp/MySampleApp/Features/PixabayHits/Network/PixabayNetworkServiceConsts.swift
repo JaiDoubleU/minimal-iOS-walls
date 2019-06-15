@@ -10,7 +10,7 @@ import Foundation
 
 enum PixabayNetworkServiceUrl {
 	#if DEBUG
-	static let apiBase = "https://pixabay.com"					// We don't have a debug api yet so we are using the same
+	static let apiBase = "https://pixabay.com"					// We don't have a debug api yet
 	#else
 	static let apiBase = "https://pixabay.com"
 	#endif
@@ -19,9 +19,9 @@ enum PixabayNetworkServiceUrl {
 }
 
 enum PixabayNetworkServiceApi {
-	// TODO save this in a better place in the future
+	// TODO save this in a safer place in the future
 	#if DEBUG
-	static let apiKey = "12718350-529ce9e3755c0dc2e7ff99c03" 	// We don't have a debug api yet so we are using the same
+	static let apiKey = "12718350-529ce9e3755c0dc2e7ff99c03" 	// We don't have a debug api key ye
 	#else
 	static let apiKey = "12718350-529ce9e3755c0dc2e7ff99c03"
 	#endif

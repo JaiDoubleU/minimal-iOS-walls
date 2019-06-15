@@ -8,7 +8,15 @@
 
 import Foundation
 
+// MARK: - Allows to extract strings from the localized file
 extension String {
+	
+	/// Allows to extract strings from the localized file
+	///
+	/// - Parameters:
+	///   - bundle: buble of your application, main by default
+	///   - tableName: Localizable by default
+	/// - Returns: string from the localized file
 	func localized(bundle: Bundle = .main, tableName: String = "Localizable") -> String {
 		return NSLocalizedString(self, tableName: tableName, value: "**\(self)**", comment: "")
 	}

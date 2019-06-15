@@ -8,14 +8,11 @@
 
 import UIKit
 
+
+// MARK: - REturns the storyboard Id to a ViewController assuming you use the same name as the ViewController's class
 extension UIViewController {
+	
 	class var storyboardID : String {
 		return "\(self)"
-	}
-}
-
-extension UIViewController {	
-	static func instantiateFromAppStoryboard(appStoryboard: AppStoryboard) -> Self? {
-		return appStoryboard.viewController(viewControllerClass: self)
 	}
 }

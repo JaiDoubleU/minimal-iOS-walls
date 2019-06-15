@@ -21,4 +21,5 @@ protocol HitsViewModelProtocol {
 	func fetchHits()
 	func numberOfItems() -> Int
 	func numberOfSections() -> Int
+	func viewModelForItem(at indexPath: IndexPath) -> HitCollectionCellViewModelProtocol
 }
