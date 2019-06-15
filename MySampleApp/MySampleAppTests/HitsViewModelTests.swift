@@ -72,6 +72,10 @@ class HitsViewModelTests: XCTestCase {
 		XCTAssertEqual(hitsViewModel.numberOfItems(), 3, "The hits model doesn't have 3 items")
 	}
 	
+	func test_numberOfSections_shouldHave1Section() {
+		XCTAssertEqual(hitsViewModel.numberOfSections(), 1, "The hits model doesn't have 1 sections")
+	}
+	
 	func test_numberOfItems_withNoData_shouldNotHaveItems() {
 		hitsViewModel.fetchHits()
 		XCTAssertEqual(hitsViewModel.numberOfItems(), 0, "The hits model doesn't have 0 items")

@@ -46,6 +46,10 @@ final class HitsViewModel: HitsViewModelProtocol {
 		return listData.value.count
 	}
 	
+	func numberOfSections() -> Int {
+		return 1
+	}
+	
 	func finish() {
 		coordinator.finish()
 	}

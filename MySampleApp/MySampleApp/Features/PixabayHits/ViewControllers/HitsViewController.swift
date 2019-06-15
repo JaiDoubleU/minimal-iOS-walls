@@ -23,9 +23,11 @@ final internal class HitsViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		title = viewModel?.title
 		setupActivityIndicator()
 		setupBond()
+		setupCollectionVew()
+		updateUI()
+		
 		viewModel?.fetchHits()
 	}
 
@@ -37,6 +39,11 @@ final internal class HitsViewController: UIViewController {
 			activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 			])
 		()
+	}
+	
+	func setupCollectionVew() {
+		hitsCollectionView.delegate = self
+		hitsCollectionView.dataSource = self
 	}
 	
 	func setupBond() {
@@ -53,16 +60,16 @@ final internal class HitsViewController: UIViewController {
 	}
 		
 	func updateUI() {
+		title = viewModel?.title
 		hitsCollectionView.reloadData()
 	}
-	
 }
 
 // MARK: UICollectionViewDataSource
 extension HitsViewController: UICollectionViewDataSource {
 	
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
-		return 1
+		return viewModel?.numberOfSections() ?? 0
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

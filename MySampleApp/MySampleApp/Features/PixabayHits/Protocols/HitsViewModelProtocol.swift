@@ -20,4 +20,5 @@ protocol HitsViewModelProtocol {
 	
 	func fetchHits()
 	func numberOfItems() -> Int
+	func numberOfSections() -> Int
 }
