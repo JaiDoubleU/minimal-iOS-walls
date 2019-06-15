@@ -28,7 +28,11 @@ final class HitsViewModel: HitsViewModelProtocol {
 	}
 	
 	func fetchHits() {
+		refreshing.value = true
+		
 		interactor.fetchHits({ [weak self] (result) in
+			self?.refreshing.value = false
+			
 			switch result {
 			case .success(let models):
 				self?.listData.value = models

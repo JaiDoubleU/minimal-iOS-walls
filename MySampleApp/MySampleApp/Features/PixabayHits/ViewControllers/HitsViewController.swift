@@ -13,22 +13,34 @@ final internal class HitsViewController: UIViewController {
 	internal var viewModel: HitsViewModelProtocol?
 	
 	@IBOutlet weak var hitsCollectionView: UICollectionView!
-
+	
+	lazy var activityIndicator: UIActivityIndicatorView = {
+		let indicatorView = UIActivityIndicatorView(style: .gray)
+		indicatorView.hidesWhenStopped = true
+		return indicatorView
+	}()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		
-		self.title = viewModel?.title
+		title = viewModel?.title
+		setupActivityIndicator()
 		setupBond()
 		viewModel?.fetchHits()
 	}
-	
-	func updateUI() {
-		hitsCollectionView.reloadData()
+
+	func setupActivityIndicator() {
+		view.addSubview(activityIndicator)
+		activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+		NSLayoutConstraint.activate([
+			activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+			activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+			])
+		()
 	}
 	
 	func setupBond() {
-//		viewModel.refreshing.bind(to: viewController.activityIndicator.reactive.isAnimating)
+		viewModel?.refreshing.bind(to: activityIndicator.reactive.isAnimating)
 		
 		viewModel?.listData.bind(to: self) { strongSelf, _ in
 			strongSelf.updateUI()
@@ -37,8 +49,13 @@ final internal class HitsViewController: UIViewController {
 		viewModel?.error.bind(to: self) { strongSelf, _ in
 			guard let error = strongSelf.viewModel?.error.value else { return }
 			strongSelf.showAlertView(title: nil, error: error)
-		}				
+		}
 	}
+		
+	func updateUI() {
+		hitsCollectionView.reloadData()
+	}
+	
 }
 
 // MARK: UICollectionViewDataSource
