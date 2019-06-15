@@ -31,6 +31,7 @@ internal class HitCollectionViewCell: UICollectionViewCell {
 	
 	private func setupGestures() {
 		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hitImageViewTapped(tapGestureRecognizer:)))
+		tapGestureRecognizer.cancelsTouchesInView = false
 		hitImageView.isUserInteractionEnabled = true
 		hitImageView.addGestureRecognizer(tapGestureRecognizer)
 	}
