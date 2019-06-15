@@ -67,7 +67,6 @@
 		78CDD9A022ADA1F300CD1384 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDD99F22ADA1F300CD1384 /* MockURLSession.swift */; };
 		78CDD9A222ADA21B00CD1384 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDD9A122ADA21B00CD1384 /* MockURLSessionDataTask.swift */; };
 		78CDD9A422ADA30000CD1384 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDD9A322ADA30000CD1384 /* NetworkManagerTests.swift */; };
-		78D7B72522AB962C007D1752 /* MySampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7B72422AB962C007D1752 /* MySampleAppTests.swift */; };
 		78D7B77A22AC08C0007D1752 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78D7B77922AC08C0007D1752 /* Localizable.strings */; };
 		A403EB348B0A330C472730E4 /* Pods_MySampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 204652D0712E44561841FC28 /* Pods_MySampleApp.framework */; };
 /* End PBXBuildFile section */
@@ -147,7 +146,6 @@
 		78CDD9A122ADA21B00CD1384 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		78CDD9A322ADA30000CD1384 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		78D7B72222AB962B007D1752 /* MySampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78D7B72422AB962C007D1752 /* MySampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySampleAppTests.swift; sourceTree = "<group>"; };
 		78D7B72622AB962C007D1752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78D7B77922AC08C0007D1752 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../../Localizable.strings; sourceTree = "<group>"; };
 		7C22944EC5D4C828B62244C6 /* Pods-MySampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySampleApp/Pods-MySampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -491,13 +489,12 @@
 			isa = PBXGroup;
 			children = (
 				78CDD99E22ADA1E200CD1384 /* Mocks */,
-				78D7B72422AB962C007D1752 /* MySampleAppTests.swift */,
 				78D7B72622AB962C007D1752 /* Info.plist */,
-				78CDD9A322ADA30000CD1384 /* NetworkManagerTests.swift */,
-				7837F06222B41E540065C200 /* UIImageView+DownloadTests.swift */,
-				7837F06522B43DBC0065C200 /* HitsViewModelTests.swift */,
 				7837F06B22B440380065C200 /* HitsIteratorTests.swift */,
+				7837F06522B43DBC0065C200 /* HitsViewModelTests.swift */,
+				78CDD9A322ADA30000CD1384 /* NetworkManagerTests.swift */,
 				785E643A22B51C13005D3B8C /* PixabayNetworkServiceTests.swift */,
+				7837F06222B41E540065C200 /* UIImageView+DownloadTests.swift */,
 			);
 			path = MySampleAppTests;
 			sourceTree = "<group>";
@@ -721,7 +718,6 @@
 				7837F06C22B440380065C200 /* HitsIteratorTests.swift in Sources */,
 				78CDD9A022ADA1F300CD1384 /* MockURLSession.swift in Sources */,
 				785E643B22B51C13005D3B8C /* PixabayNetworkServiceTests.swift in Sources */,
-				78D7B72522AB962C007D1752 /* MySampleAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
