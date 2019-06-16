@@ -25,7 +25,7 @@ extension UIView {
 		}
 	}
 	
-	/// helper metthod for applying a shadow radius
+	/// helper method for applying a shadow radius
 	///
 	/// - Parameter shadowRadius: CGFloat by default 5
 	func applyShadow(shadowRadius: CGFloat = 5) {

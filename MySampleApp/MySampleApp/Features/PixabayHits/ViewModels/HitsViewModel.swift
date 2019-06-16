@@ -11,7 +11,7 @@ import Bond
 import ReactiveKit
 
 /// HitsViewModels contains presentation logic for preparing data to be shown by the View
-final class HitsViewModel: HitsViewModelProtocol {
+final internal class HitsViewModel: HitsViewModelProtocol {
 	
 	private (set) var interactor: HitsInteractorProtocol
 	private (set) var coordinator: CoordinatorProtocol

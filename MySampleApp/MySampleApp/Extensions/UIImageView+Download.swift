@@ -8,7 +8,7 @@
 
 import UIKit
 
-// NSCache this is just for tis basic app. for a real app we should have a better approach
+// NSCache this is just for this basic app. in a real app we should have a better approach
 let imageCache = NSCache<NSString, UIImage>()
 
 // MARK: - Allows to async download images
