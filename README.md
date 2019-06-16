@@ -14,7 +14,6 @@ It's meant as a sample project for showing a clean MVVM-C architecture and best 
 - UnitTests (80% coverage)
 - Observer pattern uses Bond (ReactiveKit)
 - Image downloader on demand and asynchronously without third party libraries
-- Pixabay open API is use
 
 - Language localization without hardcoded strings
 - Storyboard and ViewController instantiation without hardcoded strings
