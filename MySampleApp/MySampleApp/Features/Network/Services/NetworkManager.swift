@@ -15,8 +15,14 @@ final class NetworkManager: NetworkManagerProtocol {
 	private (set) var networkModel: NetworkModelProtocol
 	private (set) var session: URLSessionProtocol
 
+	
+	/// Initializes the NetworkManager with a NetworkModelProtocol (base, path, headers etc)
+	///
+	/// - Parameters:
+	///   - networkModel: NetworkModelProtocol object. this object containsproperties such as  (base, path, headers, http method etc)
+	///   - session: URLSessionProtocol object you can pass your MockURLSession as well
 	required init(networkModel: NetworkModelProtocol,
-						 session: URLSessionProtocol) {
+				  session: URLSessionProtocol) {
 		self.networkModel = networkModel
 		self.session = session
 	}
@@ -28,10 +34,12 @@ final class NetworkManager: NetworkManagerProtocol {
 		// creating the url components
 		var urlComponnents = URLComponents(string: networkModel.base)
 		
+		// path
 		if let path = networkModel.path {
 			urlComponnents?.path = path
 		}
 		
+		// params
 		if let params = networkModel.params {
 			urlComponnents?.queryItems = params
 		}
@@ -41,8 +49,14 @@ final class NetworkManager: NetworkManagerProtocol {
 			return
 		}
 		
+		// URLRequest
 		var request = URLRequest(url: url)
-		request.httpMethod = networkModel.method.rawValue
+		request.httpMethod = networkModel.method.rawValue // http method (.post, .get, .put ...)
+		
+		// headers
+		if let headers = networkModel.headers {
+			request.allHTTPHeaderFields = headers.headers
+		}
 		
 		let task = session.dataTask(with: request) { [weak self] (data, response, error) in
 			self?.handleServerResponse(data: data, response: response, error: error, completionHandler: completionHandler)

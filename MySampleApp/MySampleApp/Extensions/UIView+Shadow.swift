@@ -10,6 +10,7 @@ import UIKit
 
 extension UIView {
 	
+	/// adds a shadow to a view with a given radius
 	@IBInspectable
 	var shadowRadius: CGFloat {
 		get {
@@ -24,6 +25,9 @@ extension UIView {
 		}
 	}
 	
+	/// helper metthod for applying a shadow radius
+	///
+	/// - Parameter shadowRadius: CGFloat by default 5
 	func applyShadow(shadowRadius: CGFloat = 5) {
 		self.shadowRadius = shadowRadius
 	}

@@ -15,7 +15,6 @@ extension URLSession: URLSessionProtocol {
 	}
 }
 
-
 // MARK: - URLSessionDataTaskProtocol
 extension URLSessionDataTask: URLSessionDataTaskProtocol {
 }

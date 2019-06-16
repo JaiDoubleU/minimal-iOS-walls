@@ -8,7 +8,7 @@
 
 import Foundation
 
-///[Online Reference](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)
+/// Online Reference = https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
 enum HTTPMethod: String {
 	case get = "GET"
 	case put = "PUT"

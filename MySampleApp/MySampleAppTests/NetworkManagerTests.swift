@@ -21,8 +21,8 @@ class NetworkManagerTests: XCTestCase {
 		super.setUp()
 		
 		session = MockURLSession()
-		networkModel = NetworkModel(base: PixabayNetworkServiceUrl.apiBase,
-									path: PixabayNetworkServiceUrl.apiPath,
+		networkModel = NetworkModel(base: PixabayNetworkServiceUrls.apiBase,
+									path: PixabayNetworkServiceUrls.apiPath,
 									params: nil,
 									headers: nil,
 									method: .get)
@@ -52,7 +52,7 @@ class NetworkManagerTests: XCTestCase {
 
 		// specific network model with bad URL
 		networkModel = NetworkModel(base: "((\\w)*|([0-9]",
-									path: PixabayNetworkServiceUrl.apiPath,
+									path: PixabayNetworkServiceUrls.apiPath,
 									params: nil,
 									headers: nil,
 									method: .get)

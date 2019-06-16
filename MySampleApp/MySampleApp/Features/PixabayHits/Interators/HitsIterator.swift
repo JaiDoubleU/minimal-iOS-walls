@@ -13,7 +13,7 @@ struct HitsInteractor: HitsInteractorProtocol {
 	
 	private (set) var dataService: PixabayNetworkServiceProtocol
 	
-	///
+	/// Initializer
 	///
 	/// - Parameter dataService: PixabayNetworkServiceProtocol
 	init (_ dataService: PixabayNetworkServiceProtocol = PixabayNetworkService()) {

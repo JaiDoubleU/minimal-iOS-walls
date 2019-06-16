@@ -25,8 +25,8 @@ class HitsIteratorTests: XCTestCase {
 	
 		// Session
 		session = MockURLSession()
-		networkModel = NetworkModel(base: PixabayNetworkServiceUrl.apiBase,
-									path: PixabayNetworkServiceUrl.apiPath,
+		networkModel = NetworkModel(base: PixabayNetworkServiceUrls.apiBase,
+									path: PixabayNetworkServiceUrls.apiPath,
 									params: nil,
 									headers: nil,
 									method: .get)

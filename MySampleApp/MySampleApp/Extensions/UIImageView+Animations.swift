@@ -10,6 +10,9 @@ import UIKit
 
 extension UIImageView {
 	
+	/// animate the transition between and old image and a new one
+	///
+	/// - Parameter image: animates the transition between images with a set animation, transitionFlipFromBottom with a duration of 0.75, we can expand this method for allowing customization in the future
 	func animateTransition(to image: UIImage) {
 		UIView.transition(with: self,
 						  duration: 0.75,
