@@ -34,7 +34,7 @@
 		786FC2EF22AFA02B00112FB8 /* NSURLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2C922AFA02B00112FB8 /* NSURLSession+Extensions.swift */; };
 		786FC2F022AFA02B00112FB8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2CB22AFA02B00112FB8 /* NetworkManager.swift */; };
 		786FC2F122AFA02B00112FB8 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2CE22AFA02B00112FB8 /* LocalizableStrings.swift */; };
-		786FC2F222AFA02B00112FB8 /* Localizable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D022AFA02B00112FB8 /* Localizable+Extensions.swift */; };
+		786FC2F222AFA02B00112FB8 /* LocalizableProtocol+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D022AFA02B00112FB8 /* LocalizableProtocol+Extensions.swift */; };
 		786FC2F322AFA02B00112FB8 /* LocalizableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D222AFA02B00112FB8 /* LocalizableProtocol.swift */; };
 		786FC2F422AFA02B00112FB8 /* UIViewController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D422AFA02B00112FB8 /* UIViewController+Errors.swift */; };
 		786FC2F622AFA02B00112FB8 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC2D622AFA02B00112FB8 /* UIImageView+Download.swift */; };
@@ -111,7 +111,7 @@
 		786FC2C922AFA02B00112FB8 /* NSURLSession+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSession+Extensions.swift"; sourceTree = "<group>"; };
 		786FC2CB22AFA02B00112FB8 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		786FC2CE22AFA02B00112FB8 /* LocalizableStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizableStrings.swift; path = Enums/LocalizableStrings.swift; sourceTree = "<group>"; };
-		786FC2D022AFA02B00112FB8 /* Localizable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Localizable+Extensions.swift"; path = "Extensions/Localizable+Extensions.swift"; sourceTree = "<group>"; };
+		786FC2D022AFA02B00112FB8 /* LocalizableProtocol+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LocalizableProtocol+Extensions.swift"; path = "Extensions/LocalizableProtocol+Extensions.swift"; sourceTree = "<group>"; };
 		786FC2D222AFA02B00112FB8 /* LocalizableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizableProtocol.swift; path = Protocols/LocalizableProtocol.swift; sourceTree = "<group>"; };
 		786FC2D422AFA02B00112FB8 /* UIViewController+Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Errors.swift"; sourceTree = "<group>"; };
 		786FC2D622AFA02B00112FB8 /* UIImageView+Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
@@ -338,7 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				786FC2CE22AFA02B00112FB8 /* LocalizableStrings.swift */,
-				786FC2D022AFA02B00112FB8 /* Localizable+Extensions.swift */,
+				786FC2D022AFA02B00112FB8 /* LocalizableProtocol+Extensions.swift */,
 				786FC2D222AFA02B00112FB8 /* LocalizableProtocol.swift */,
 			);
 			path = Localizable;
@@ -466,8 +466,8 @@
 		78A344B522AA254B00AD8A17 /* MySampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				786FC30622AFA35E00112FB8 /* Enums */,
 				786FC2FC22AFA0ED00112FB8 /* Coordinators */,
+				786FC30622AFA35E00112FB8 /* Enums */,
 				786FC2D322AFA02B00112FB8 /* Extensions */,
 				786FC2A522AFA02B00112FB8 /* Features */,
 				786FC2D822AFA02B00112FB8 /* Protocols */,
@@ -671,7 +671,7 @@
 				786FC2F122AFA02B00112FB8 /* LocalizableStrings.swift in Sources */,
 				786FC2F722AFA02B00112FB8 /* String+Localization.swift in Sources */,
 				786FC2DB22AFA02B00112FB8 /* HitsViewModel.swift in Sources */,
-				786FC2F222AFA02B00112FB8 /* Localizable+Extensions.swift in Sources */,
+				786FC2F222AFA02B00112FB8 /* LocalizableProtocol+Extensions.swift in Sources */,
 				786FC2E922AFA02B00112FB8 /* NetworkHeaders.swift in Sources */,
 				786FC2DC22AFA02B00112FB8 /* HitCollectionCellViewModel.swift in Sources */,
 				786FC30822AFA37100112FB8 /* AppStoryboard.swift in Sources */,

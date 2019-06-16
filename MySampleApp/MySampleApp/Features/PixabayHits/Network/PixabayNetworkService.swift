@@ -8,15 +8,18 @@
 
 import Foundation
 
+/// Allows to get hit models from the internet
 struct PixabayNetworkService: PixabayNetworkServiceProtocol {
 	
-	let networkManager: NetworkManagerProtocol
+	private (set) var networkManager: NetworkManagerProtocol
 	
 	init() {
-		let defaultParams = [URLQueryItem(name: "key", value: PixabayNetworkServiceApi.apiKey)]
 		
-		let networkModel = NetworkModel(base: PixabayNetworkServiceUrl.apiBase,
-										path: PixabayNetworkServiceUrl.apiPath,
+		/// Pixabay needs the api key as a get param
+		let defaultParams = [URLQueryItem(name: "key", value: PixabayNetworkServiceKeys.apiKey)]
+		
+		let networkModel = NetworkModel(base: PixabayNetworkServiceUrls.apiBase,
+										path: PixabayNetworkServiceUrls.apiPath,
 										params: defaultParams,
 										headers: nil,
 										method: .get)
@@ -29,6 +32,10 @@ struct PixabayNetworkService: PixabayNetworkServiceProtocol {
 		self.networkManager = networkManager
 	}
 	
+	
+	/// download hits
+	///
+	/// - Parameter completionHandler: Result<[Hit], NetworkError>
 	func getHits(_ completionHandler: @escaping ((Result<[Hit], NetworkError>) -> Void)) {
 		networkManager.execute { (result) in 
 			switch result {
@@ -41,6 +48,11 @@ struct PixabayNetworkService: PixabayNetworkServiceProtocol {
 		}
 	}
 	
+	/// decode the return data to a hit array
+	///
+	/// - Parameters:
+	///   - data: json object
+	///   - completionHandler: Result<[Hit], NetworkError>
 	internal func decode(data: Data, completionHandler: ((Result<[Hit], NetworkError>) -> Void)) {
 		data.decodeJSON(to: PixabayHitsResponseModel.self, completionHandler: { (result) in
 			switch result {

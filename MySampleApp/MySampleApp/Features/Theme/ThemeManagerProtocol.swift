@@ -10,5 +10,4 @@ import Foundation
 
 protocol ThemeManagerProtocol {
 	static func applyTheme()
-	static func setupNavigationBar()
 }

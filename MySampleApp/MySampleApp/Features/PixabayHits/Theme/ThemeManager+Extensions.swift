@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - Specific theme scheme for Pixabay
 struct ThemeManager: ThemeManagerProtocol {
 	
 	static func applyTheme() {

@@ -8,8 +8,8 @@
 
 import UIKit
 
+/// Color Scheme Helper
 enum Color {
-	
 	case theme
 	case border
 	case shadow

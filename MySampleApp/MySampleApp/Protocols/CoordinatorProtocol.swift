@@ -8,7 +8,12 @@
 
 import Foundation
 
+/// Common coordinator
 protocol CoordinatorProtocol {
+	
+	/// Usually creates viewController, interactor, viewModel objects and displays the view controller
 	func start()
+	
+	/// A view controller is ready to be dismissed
 	func finish()
 }

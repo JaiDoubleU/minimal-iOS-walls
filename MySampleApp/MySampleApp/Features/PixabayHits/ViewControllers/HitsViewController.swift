@@ -10,10 +10,12 @@ import UIKit
 
 final internal class HitsViewController: UIViewController {
 
+	/// Hits View Model
 	internal var viewModel: HitsViewModelProtocol?
 	
 	@IBOutlet weak var hitsCollectionView: UICollectionView!
 	
+	/// Default Activity Indicator
 	lazy var activityIndicator: UIActivityIndicatorView = {
 		let indicatorView = UIActivityIndicatorView(style: .gray)
 		indicatorView.hidesWhenStopped = true
@@ -23,14 +25,24 @@ final internal class HitsViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		// navigation bar title
+		title = viewModel?.title
+		
+		// setups the ui elements: activity indicator, bond, collection view
+		setupUIElements()
+		
+		// starts fetching
+		viewModel?.fetchHits()
+	}
+	
+	/// setup the ui elements: activity indicator, bond, collection view
+	func setupUIElements() {
 		setupActivityIndicator()
 		setupBond()
 		setupCollectionVew()
-		updateUI()
-		
-		viewModel?.fetchHits()
 	}
 
+	/// default activity indicator, adds it to the view and adds teh contracts
 	func setupActivityIndicator() {
 		view.addSubview(activityIndicator)
 		activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -46,22 +58,18 @@ final internal class HitsViewController: UIViewController {
 		hitsCollectionView.dataSource = self
 	}
 	
+	/// Establishes the bond connections
 	func setupBond() {
 		viewModel?.refreshing.bind(to: activityIndicator.reactive.isAnimating)
 		
 		viewModel?.listData.bind(to: self) { strongSelf, _ in
-			strongSelf.updateUI()
+			strongSelf.hitsCollectionView.reloadData()
 		}
 		
 		viewModel?.error.bind(to: self) { strongSelf, _ in
 			guard let error = strongSelf.viewModel?.error.value else { return }
 			strongSelf.showAlertView(title: nil, error: error)
 		}
-	}
-		
-	func updateUI() {
-		title = viewModel?.title
-		hitsCollectionView.reloadData()
 	}
 }
 
@@ -79,6 +87,7 @@ extension HitsViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HitCollectionViewCell.reuseIdentifier, for: indexPath) as! HitCollectionViewCell
 		
+		// prepares the collection view model and pass it to the cell
 		if let collectionViewModel = viewModel?.viewModelForItem(at: indexPath) {
 			cell.configure(viewModel: collectionViewModel)
 		}
@@ -86,7 +95,6 @@ extension HitsViewController: UICollectionViewDataSource {
 		return cell
 	}
 }
-
 
 // MARK: UICollectionViewDelegate
 extension HitsViewController: UICollectionViewDelegate {

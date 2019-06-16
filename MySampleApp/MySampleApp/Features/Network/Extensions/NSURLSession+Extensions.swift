@@ -8,12 +8,14 @@
 
 import Foundation
 
-//MARK: Conform the protocol
+//MARK: Conform the protocol URLSessionProtocol
 extension URLSession: URLSessionProtocol {
 	func dataTask(with request: URLRequest, completionHandler: @escaping URLSessionProtocol.DataTaskResult) -> URLSessionDataTaskProtocol {
 		return dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask
 	}
 }
 
+
+// MARK: - URLSessionDataTaskProtocol
 extension URLSessionDataTask: URLSessionDataTaskProtocol {
 }

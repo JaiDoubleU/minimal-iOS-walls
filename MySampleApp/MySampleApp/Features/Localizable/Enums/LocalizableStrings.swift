@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum LocalizableStrings: String, Localizable {
+/// Put here your localizablbe strings keys, it should match the ones from your localizable.string
+enum LocalizableStrings: String, LocalizableProtocol {
 	case genericOk = "ok"
 	case genericError = "error"
 	case badUrl = "network_error_bad_url"

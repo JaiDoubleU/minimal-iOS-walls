@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// HitCollectionCellViewModel contains presentation logic for preparing data to be shown by the CellView
 struct HitCollectionCellViewModel: HitCollectionCellViewModelProtocol {
 	
 	private (set) var model: Hit

@@ -6,8 +6,7 @@
 //  Copyright © 2019 Touchsoft. All rights reserved.
 //
 
-import UIKit
-
+/// Font Scheme Helper
 enum Font {
 	case veryVeryLarge(bold: Bool)
 	case veryLarge(bold: Bool)

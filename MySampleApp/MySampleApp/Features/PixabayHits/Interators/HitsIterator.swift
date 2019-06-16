@@ -8,14 +8,21 @@
 
 import Foundation
 
+/// handles the connection between the network service and viewmodel. it allows us to fetch hits, in the future we can save hits in the DB
 struct HitsInteractor: HitsInteractorProtocol {
 	
-	var dataService: PixabayNetworkService
+	private (set) var dataService: PixabayNetworkServiceProtocol
 	
-	init (_ dataService: PixabayNetworkService = PixabayNetworkService()) {
+	///
+	///
+	/// - Parameter dataService: PixabayNetworkServiceProtocol
+	init (_ dataService: PixabayNetworkServiceProtocol = PixabayNetworkService()) {
 		self.dataService = dataService
 	}
 	
+	/// fetchHits
+	///
+	/// - Parameter completionBlock: retruns hit models
 	func fetchHits(_ completionBlock: @escaping (Result<[Hit], NetworkError>) -> Void) {
 		dataService.getHits(completionBlock)
 	}

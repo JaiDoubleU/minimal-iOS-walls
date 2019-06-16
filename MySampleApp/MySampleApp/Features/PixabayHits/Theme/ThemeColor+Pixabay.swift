@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - Specific color scheme for Pixabay
 extension Color {
 	
 	var value: UIColor {

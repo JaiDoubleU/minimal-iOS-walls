@@ -13,6 +13,7 @@ enum FontFamilyType: String {
 	case bold = "CourierNewPS-BoldMT"
 }
 
+// MARK: - Specific fonts scheme for Pixabay
 extension Font {
 	
 	static let minFontSize: CGFloat = 11.0

@@ -10,11 +10,9 @@ import Foundation
 @testable import MySampleApp
 
 struct MockCoordinator: CoordinatorProtocol {
-	
 	func start() {
-		
 	}
+	
 	func finish() {
-		
 	}
 }

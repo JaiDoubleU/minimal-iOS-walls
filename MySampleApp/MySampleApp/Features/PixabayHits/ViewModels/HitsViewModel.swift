@@ -13,14 +13,14 @@ import ReactiveKit
 /// HitsViewModels contains presentation logic for preparing data to be shown by the View
 final class HitsViewModel: HitsViewModelProtocol {
 	
-	internal var interactor: HitsInteractorProtocol
-	internal let coordinator: CoordinatorProtocol
+	private (set) var interactor: HitsInteractorProtocol
+	private (set) var coordinator: CoordinatorProtocol
 	
-	internal var listData = Observable<[Hit]>([])
-	internal var error = Observable<Error?>(nil)
-	internal var refreshing = Observable<Bool>(false)
+	private (set) var listData = Observable<[Hit]>([])
+	private (set) var error = Observable<Error?>(nil)
+	private (set) var refreshing = Observable<Bool>(false)
 	
-	///
+	/// Initializer
 	///
 	/// - Parameters:
 	///   - interactor: hits model
@@ -65,11 +65,10 @@ final class HitsViewModel: HitsViewModelProtocol {
 		return 1
 	}
 	
-	/**
-	Returns the item at the specified index path.
-	- Parameter indexPath: The index path locating the item in the list.
-	- Returns: An object representing an item of the list.
-	*/
+	/// Returns the item at the specified index path.
+	///
+	/// - Parameter indexPath: The index path locating the item in the list.
+	/// - Returns: An object representing an item of the list.
 	func viewModelForItem(at indexPath: IndexPath) -> HitCollectionCellViewModelProtocol {
 		let model = listData.value[indexPath.row]
 		return HitCollectionCellViewModel(model: model)

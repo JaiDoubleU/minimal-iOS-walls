@@ -6,10 +6,10 @@
 //  Copyright © 2019 Touchsoft. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-internal class HitCollectionViewCell: UICollectionViewCell {
+/// Simple Collection View Cell that shows and image and a label with information about the hit image model
+final internal class HitCollectionViewCell: UICollectionViewCell {
 	
 	@IBOutlet weak var hitImageView: UIImageView!
 	@IBOutlet weak var hitLabel: UILabel!
@@ -20,28 +20,41 @@ internal class HitCollectionViewCell: UICollectionViewCell {
 		super.awakeFromNib()
 		
 		applyTheme()
-		setupGestures()
+		setupTapGesture()
 	}
 	
+	/// Sets the UI theme for the labels and image view
 	private func applyTheme() {
 		hitLabel.textColor = Color.darkText.value
 		hitLabel.font = Font.normal(bold: true).value
 		hitImageView.applyShadow()
 	}
 	
-	private func setupGestures() {
+	
+	/// Addes a tap gesture to the hitImageView, but it doesn't cancel the touches in view
+	private func setupTapGesture() {
 		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hitImageViewTapped(tapGestureRecognizer:)))
 		tapGestureRecognizer.cancelsTouchesInView = false
 		hitImageView.isUserInteractionEnabled = true
 		hitImageView.addGestureRecognizer(tapGestureRecognizer)
 	}
 	
+	
+	/// HitCollectionCellViewModelProtocol
+	///
+	/// - Parameter viewModel: it will set the labels and imageviews according to the pass view model
 	internal func configure(viewModel: HitCollectionCellViewModelProtocol) {
 		self.viewModel = viewModel
 		hitLabel.text = viewModel.titleText
+		
+		// starts downloading the image
 		hitImageView.downloadImage(urlString: viewModel.imageUrl, placeHolder: viewModel.placeHolderImage, completionHandler: nil)
 	}
 	
+	
+	/// Tap recognizer
+	///
+	/// - Parameter tapGestureRecognizer: the image will shake when it's tapped
 	@objc private func hitImageViewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
 		if let tappedImage = tapGestureRecognizer.view as? UIImageView {
 			tappedImage.shake()
@@ -49,6 +62,7 @@ internal class HitCollectionViewCell: UICollectionViewCell {
 	}
 }
 
-extension HitCollectionViewCell: ReuseIdentifying {		
+// MARK: - ReuseIdentifying
+extension HitCollectionViewCell: ReuseIdentifying {
 }
 

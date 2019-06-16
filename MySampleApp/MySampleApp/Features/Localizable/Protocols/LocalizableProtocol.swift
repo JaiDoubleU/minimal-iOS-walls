@@ -1,5 +1,5 @@
 //
-//  Localizable.swift
+//  LocalizableProtocol.swift
 //  MySampleApp
 //
 //  Created by Alex Núñez on 08/06/2019.
@@ -8,8 +8,13 @@
 
 import Foundation
 
-protocol Localizable {
+/// Localizable Protocol
+protocol LocalizableProtocol {
+	
+	/// Localizable by default
 	var tableName: String { get }
+	
+	// Localized string
 	var localized: String { get }
 }
 
