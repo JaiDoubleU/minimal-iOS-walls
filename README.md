@@ -23,7 +23,7 @@ It's meant as a sample project for showing a clean MVVM-C architecture and best 
 
 ## Usage
 
-Downlaod the project and open the MySampleApp.xcworkspace file with XCode 10.2
+Download the project and open the MySampleApp.xcworkspace file with XCode 10.2
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
