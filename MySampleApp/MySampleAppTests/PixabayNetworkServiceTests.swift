@@ -118,24 +118,5 @@ class PixabayNetworkServiceTests: XCTestCase {
 		wait(for: [expectation], timeout: 3.0)
 	}
 	
-	func test_decode_withBadData_shouldReturnError() {
-		let expectation = XCTestExpectation(description: "Shouldn't return data")
-		
-		mockPixabayNetworkService.decode(data: Data(), completionHandler: { (result) in
-			switch result {
-			case .success(let data):
-				XCTAssertNil(data, "Data should be nil")
-			case .failure(let error):
-				if error == NetworkError.apiError(error: NetworkError.unknownError) {
-					expectation.fulfill()
-				} else {
-					XCTFail("fetchHits is returning a different error than apiError")
-				}
-			}
-		})
-		
-		wait(for: [expectation], timeout: 3.0)
-	}
-	
 }
 

@@ -23,8 +23,6 @@ class NetworkManagerTests: XCTestCase {
 		session = MockURLSession()
 		networkModel = NetworkModel(base: PixabayNetworkServiceUrls.apiBase,
 									path: PixabayNetworkServiceUrls.apiPath,
-									params: nil,
-									headers: nil,
 									method: .get)
 		networkManager = NetworkManager(networkModel: networkModel, session: session)
 	}

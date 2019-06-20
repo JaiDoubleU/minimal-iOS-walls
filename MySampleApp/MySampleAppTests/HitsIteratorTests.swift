@@ -13,28 +13,16 @@ import XCTest
 
 class HitsIteratorTests: XCTestCase {
 	
-	var session: MockURLSession!
-	var networkModel: NetworkModel!
-	var networkManager: NetworkManager!
-	var pixaBayNetworkService: PixabayNetworkService!
+	var mockPixaBayNetworkService: MockPixabayNetworkService!
 	var hitsIterator: HitsInteractor!
 	var mockJson: Data?
 	
 	override func setUp() {
 		super.setUp()
-	
-		// Session
-		session = MockURLSession()
-		networkModel = NetworkModel(base: PixabayNetworkServiceUrls.apiBase,
-									path: PixabayNetworkServiceUrls.apiPath,
-									params: nil,
-									headers: nil,
-									method: .get)
-		networkManager = NetworkManager(networkModel: networkModel, session: session)
-	
+		
 		// Services
-		pixaBayNetworkService = PixabayNetworkService(networkManager: networkManager)
-		hitsIterator = HitsInteractor(pixaBayNetworkService)
+		mockPixaBayNetworkService = MockPixabayNetworkService()
+		hitsIterator = HitsInteractor(mockPixaBayNetworkService)
 		
 		generateMockResponseModel()
 	}
@@ -51,11 +39,7 @@ class HitsIteratorTests: XCTestCase {
 	
 	override func tearDown() {
 		super.tearDown()
-		session = nil
-		networkModel = nil
-		networkManager = nil
-		
-		pixaBayNetworkService = nil
+		mockPixaBayNetworkService = nil
 		hitsIterator = nil
 		mockJson = nil
 	}
@@ -63,7 +47,7 @@ class HitsIteratorTests: XCTestCase {
 	func test_fetchHits_withData_shouldNotBeEmpty() {
 		let expectation = XCTestExpectation(description: "Shouldn't be empty")
 		
-		session.nextData = mockJson
+		mockPixaBayNetworkService.session.nextData = mockJson
 		
 		hitsIterator.fetchHits { (result) in
 			switch result {
@@ -81,7 +65,7 @@ class HitsIteratorTests: XCTestCase {
 	func test_fetchHits_withData_shouldHave3Items() {
 		let expectation = XCTestExpectation(description: "Should return 3 items")
 		
-		session.nextData = mockJson
+		mockPixaBayNetworkService.session.nextData = mockJson
 		
 		hitsIterator.fetchHits { (result) in
 			switch result {

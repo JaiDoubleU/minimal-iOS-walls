@@ -17,6 +17,7 @@ struct PixabayNetworkService: PixabayNetworkServiceProtocol {
 		/// Pixabay needs the api key as a get param
 		let defaultParams = [URLQueryItem(name: "key", value: PixabayNetworkServiceKeys.apiKey)]
 		
+			
 		let networkModel = NetworkModel(base: PixabayNetworkServiceUrls.apiBase,
 										path: PixabayNetworkServiceUrls.apiPath,
 										params: defaultParams,
