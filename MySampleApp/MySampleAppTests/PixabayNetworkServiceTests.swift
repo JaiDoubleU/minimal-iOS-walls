@@ -13,28 +13,16 @@ import XCTest
 
 class PixabayNetworkServiceTests: XCTestCase {
 	
-	var session: MockURLSession!
-	var networkModel: NetworkModel!
-	var networkManager: NetworkManager!
-	var pixaBayNetworkService: PixabayNetworkService!
+	var mockPixabayNetworkService: MockPixabayNetworkService!
 	var hitsIterator: HitsInteractor!
 	var mockJson: Data?
 	
 	override func setUp() {
 		super.setUp()
 		
-		// Session
-		session = MockURLSession()
-		networkModel = NetworkModel(base: PixabayNetworkServiceUrls.apiBase,
-									path: PixabayNetworkServiceUrls.apiPath,
-									params: nil,
-									headers: nil,
-									method: .get)
-		networkManager = NetworkManager(networkModel: networkModel, session: session)
+		mockPixabayNetworkService =  MockPixabayNetworkService()
 		
-		// Services
-		pixaBayNetworkService = PixabayNetworkService(networkManager: networkManager)
-		
+		// Mock JSON file
 		generateMockResponseModel()
 	}
 	
@@ -50,11 +38,7 @@ class PixabayNetworkServiceTests: XCTestCase {
 	
 	override func tearDown() {
 		super.tearDown()
-		session = nil
-		networkModel = nil
-		networkManager = nil
-		
-		pixaBayNetworkService = nil
+		mockPixabayNetworkService = nil
 		hitsIterator = nil
 		mockJson = nil
 	}
@@ -62,8 +46,8 @@ class PixabayNetworkServiceTests: XCTestCase {
 	func test_getHits_withData_shouldNotBeEmpty() {
 		let expectation = XCTestExpectation(description: "Shouldn't be empty")
 		
-		session.nextData = mockJson
-		pixaBayNetworkService.getHits { (result) in
+		mockPixabayNetworkService.session.nextData = mockJson
+		mockPixabayNetworkService.getHits { (result) in
 			switch result {
 			case .success(let hits):
 				XCTAssertNotNil(hits, "The data is empty")
@@ -79,9 +63,9 @@ class PixabayNetworkServiceTests: XCTestCase {
 	func test_getHits_withData_shouldHave3Items() {
 		let expectation = XCTestExpectation(description: "Should return 3 items")
 		
-		session.nextData = mockJson
+		mockPixabayNetworkService.session.nextData = mockJson
 		
-		pixaBayNetworkService.getHits { (result) in
+		mockPixabayNetworkService.getHits { (result) in
 			switch result {
 			case .success(let data):
 				XCTAssertEqual(data.count, 3, "The return item is diferent than 3")
@@ -97,7 +81,7 @@ class PixabayNetworkServiceTests: XCTestCase {
 	func test_fetchHits_withNoata() {
 		let expectation = XCTestExpectation(description: "Shouldn't return data")
 		
-		pixaBayNetworkService.getHits { (result) in
+		mockPixabayNetworkService.getHits { (result) in
 			switch result {
 			case .success(let data):
 				XCTAssertNil(data, "Data should be nil")
@@ -116,9 +100,9 @@ class PixabayNetworkServiceTests: XCTestCase {
 	func test_fetchHits_withError() {
 		let expectation = XCTestExpectation(description: "Shouldn't return data")
 		
-		session.nextError = NetworkError.apiError(error: NetworkError.unknownError)
+		mockPixabayNetworkService.session.nextError = NetworkError.apiError(error: NetworkError.unknownError)
 		
-		pixaBayNetworkService.getHits { (result) in
+		mockPixabayNetworkService.getHits { (result) in
 			switch result {
 			case .success(let data):
 				XCTAssertNil(data, "Data should be nil")
@@ -137,7 +121,7 @@ class PixabayNetworkServiceTests: XCTestCase {
 	func test_decode_withBadData_shouldReturnError() {
 		let expectation = XCTestExpectation(description: "Shouldn't return data")
 		
-		pixaBayNetworkService.decode(data: Data(), completionHandler: { (result) in
+		mockPixabayNetworkService.decode(data: Data(), completionHandler: { (result) in
 			switch result {
 			case .success(let data):
 				XCTAssertNil(data, "Data should be nil")
