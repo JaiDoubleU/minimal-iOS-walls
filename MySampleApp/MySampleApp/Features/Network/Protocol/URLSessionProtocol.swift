@@ -14,7 +14,3 @@ protocol URLSessionProtocol {
 	
 	func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol
 }
-
-protocol URLSessionDataTaskProtocol {
-	func resume()
-}

@@ -10,19 +10,15 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-	var window: UIWindow?
+	
 	var appCoordinator: AppCoordinator?
 	static var shared = AppDelegate() // Declare a static variable as an instance of AppDelegate
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		window = UIWindow()
-		
 		// AppCoordinator (router)
-		appCoordinator = AppCoordinator(window)
+		appCoordinator = AppCoordinator(UIWindow())
 		appCoordinator?.start()
-		window?.makeKeyAndVisible()
-				
+		
 		return true
 	}
 

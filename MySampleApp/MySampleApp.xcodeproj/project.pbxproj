@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		780D589C22BAC60E00F11C3C /* UIColor+HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D589B22BAC60E00F11C3C /* UIColor+HexTests.swift */; };
 		780D589E22BB611D00F11C3C /* MockPixabayNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D589D22BB611D00F11C3C /* MockPixabayNetworkService.swift */; };
+		780D58A022BB833900F11C3C /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D589F22BB833900F11C3C /* URLSessionDataTaskProtocol.swift */; };
 		7837F06322B41E540065C200 /* UIImageView+DownloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837F06222B41E540065C200 /* UIImageView+DownloadTests.swift */; };
 		7837F06422B43C080065C200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BD22AA255100AD8A17 /* Assets.xcassets */; };
 		7837F06622B43DBC0065C200 /* HitsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837F06522B43DBC0065C200 /* HitsViewModelTests.swift */; };
@@ -89,6 +90,7 @@
 		240C0E201EFC3823E1007903 /* Pods-MySampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySampleApp/Pods-MySampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		780D589B22BAC60E00F11C3C /* UIColor+HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTests.swift"; sourceTree = "<group>"; };
 		780D589D22BB611D00F11C3C /* MockPixabayNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPixabayNetworkService.swift; sourceTree = "<group>"; };
+		780D589F22BB833900F11C3C /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		7837F06222B41E540065C200 /* UIImageView+DownloadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadTests.swift"; sourceTree = "<group>"; };
 		7837F06522B43DBC0065C200 /* HitsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsViewModelTests.swift; sourceTree = "<group>"; };
 		7837F06922B43F6C0065C200 /* MockCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
@@ -314,10 +316,11 @@
 		786FC2C422AFA02B00112FB8 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				786FC2C522AFA02B00112FB8 /* NetworkModelProtocol.swift */,
 				786FC2C622AFA02B00112FB8 /* NetworkHeadersProtocol.swift */,
-				786FC2C722AFA02B00112FB8 /* URLSessionProtocol.swift */,
 				785E643822B51307005D3B8C /* NetworkManagerProtocol.swift */,
+				786FC2C522AFA02B00112FB8 /* NetworkModelProtocol.swift */,
+				780D589F22BB833900F11C3C /* URLSessionDataTaskProtocol.swift */,
+				786FC2C722AFA02B00112FB8 /* URLSessionProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				786FC33C22AFFA7A00112FB8 /* UIImageView+Animations.swift in Sources */,
 				786FC2DF22AFA02B00112FB8 /* HitCollectionViewCell.swift in Sources */,
 				786FC31E22AFA91D00112FB8 /* UIColor+Hex.swift in Sources */,
+				780D58A022BB833900F11C3C /* URLSessionDataTaskProtocol.swift in Sources */,
 				78A344B722AA254B00AD8A17 /* AppDelegate.swift in Sources */,
 				78CFF21122B5957D00FCD919 /* UIViewController+StoryboardInstance.swift in Sources */,
 				786FC33E22AFFB5900112FB8 /* ThemeManager+Extensions.swift in Sources */,

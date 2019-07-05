@@ -38,6 +38,7 @@ final class AppCoordinator: CoordinatorProtocol {
 		
 		// establishing the window.rootVC
 		window.rootViewController = navigationController
+		window.makeKeyAndVisible()
 	}
 	
 	/// Handle when HitsViewController is finished
