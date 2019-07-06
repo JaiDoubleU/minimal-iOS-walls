@@ -7,10 +7,14 @@
 //
 
 import Foundation
+@testable import MySampleAPI
 @testable import MySampleApp
 
-struct MockCoordinator: CoordinatorProtocol {
+struct MockCoordinator: HitsCoordinatorProtocol {
 	func start() {
+	}
+	
+	func present(hit: Hit) {		
 	}
 	
 	func finish() {

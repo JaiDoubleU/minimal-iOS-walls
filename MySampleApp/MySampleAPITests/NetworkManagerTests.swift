@@ -73,9 +73,6 @@ class NetworkManagerTests: XCTestCase {
 	
 	func test_execute_withNoData_shouldReturnError() {
 		let expectation = XCTestExpectation(description: "Should get bad url error")
-		
-		session.nextData = nil
-		
 		networkManager.execute { (result) in
 			switch result {
 			case .success(let data):
@@ -95,6 +92,7 @@ class NetworkManagerTests: XCTestCase {
 		let dataTask = MockURLSessionDataTask()
 		session.nextDataTask = dataTask
 		
+		networkManager = NetworkManager(networkModel: networkModel, session: session)
 		networkManager.execute { (result) in
 		}
 		
@@ -107,6 +105,7 @@ class NetworkManagerTests: XCTestCase {
 		
 		let expectation = XCTestExpectation(description: "Get request")
 		
+		networkManager = NetworkManager(networkModel: networkModel, session: session)
 		networkManager.execute { (result) in
 			switch result {
 			case .success(let data):
@@ -125,6 +124,7 @@ class NetworkManagerTests: XCTestCase {
 		
 		let expectation = XCTestExpectation(description: "Get request")
 		
+		networkManager = NetworkManager(networkModel: networkModel, session: session)
 		networkManager.execute { (result) in
 			switch result {
 			case .success(let data):
