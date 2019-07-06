@@ -69,6 +69,8 @@
 		7894A42522D0F513004896FE /* PixabayHitsResponseModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 7894A42422D0F513004896FE /* PixabayHitsResponseModel.json */; };
 		7894A42A22D0F7D0004896FE /* MySampleAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7894A3A222CFE30E004896FE /* MySampleAPI.framework */; };
 		7894A42B22D0F7D0004896FE /* MySampleAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7894A3A222CFE30E004896FE /* MySampleAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7894A43622D102B5004896FE /* HitsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A43522D102B5004896FE /* HitsCoordinator.swift */; };
+		7894A43822D102DE004896FE /* HitsCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A43722D102DE004896FE /* HitsCoordinatorProtocol.swift */; };
 		78A344B722AA254B00AD8A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A344B622AA254B00AD8A17 /* AppDelegate.swift */; };
 		78A344BC22AA254B00AD8A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BA22AA254B00AD8A17 /* Main.storyboard */; };
 		78A344BE22AA255100AD8A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BD22AA255100AD8A17 /* Assets.xcassets */; };
@@ -190,6 +192,8 @@
 		7894A42422D0F513004896FE /* PixabayHitsResponseModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PixabayHitsResponseModel.json; path = MySampleAppTests/PixabayHitsResponseModel.json; sourceTree = SOURCE_ROOT; };
 		7894A42622D0F5B7004896FE /* MySampleAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySampleAPI.h; path = MySampleAPI/MySampleAPI/MySampleAPI.h; sourceTree = "<group>"; };
 		7894A42722D0F5B7004896FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MySampleAPI/MySampleAPI/Info.plist; sourceTree = "<group>"; };
+		7894A43522D102B5004896FE /* HitsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitsCoordinator.swift; sourceTree = "<group>"; };
+		7894A43722D102DE004896FE /* HitsCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		78A344B322AA254B00AD8A17 /* MySampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A344B622AA254B00AD8A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A344BB22AA254B00AD8A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -268,8 +272,8 @@
 		786FC2A622AFA02B00112FB8 /* PixabayHits */ = {
 			isa = PBXGroup;
 			children = (
+				7894A43422D10299004896FE /* Coordinators */,
 				786FC2AE22AFA02B00112FB8 /* CollectionViewCells */,
-				786FC31A22AFA89100112FB8 /* Models */,
 				786FC2B222AFA02B00112FB8 /* Protocols */,
 				786FC33022AFB86700112FB8 /* Theme */,
 				786FC2B022AFA02B00112FB8 /* ViewControllers */,
@@ -308,6 +312,7 @@
 			children = (
 				786FC2B422AFA02B00112FB8 /* HitsViewModelProtocol.swift */,
 				786FC2B522AFA02B00112FB8 /* HitCollectionCellViewModelProtocol.swift */,
+				7894A43722D102DE004896FE /* HitsCoordinatorProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -389,13 +394,6 @@
 				786FC30F22AFA79400112FB8 /* UIViewController+StoryboardId.swift */,
 			);
 			path = "Storyboard And Reusable Id";
-			sourceTree = "<group>";
-		};
-		786FC31A22AFA89100112FB8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		786FC32022AFA99000112FB8 /* Theme */ = {
@@ -546,6 +544,14 @@
 			);
 			name = Mocks;
 			path = MySampleAPI/Mocks;
+			sourceTree = "<group>";
+		};
+		7894A43422D10299004896FE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				7894A43522D102B5004896FE /* HitsCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		78A344AA22AA254B00AD8A17 = {
@@ -884,6 +890,7 @@
 				786FC2F722AFA02B00112FB8 /* String+Localization.swift in Sources */,
 				786FC2DB22AFA02B00112FB8 /* HitsViewModel.swift in Sources */,
 				786FC2F222AFA02B00112FB8 /* LocalizableProtocol+Extensions.swift in Sources */,
+				7894A43622D102B5004896FE /* HitsCoordinator.swift in Sources */,
 				7894A3FA22CFF535004896FE /* UIImageView+Download.swift in Sources */,
 				786FC2DC22AFA02B00112FB8 /* HitCollectionCellViewModel.swift in Sources */,
 				786FC30822AFA37100112FB8 /* AppStoryboard.swift in Sources */,
@@ -893,6 +900,7 @@
 				786FC2E222AFA02B00112FB8 /* HitsViewModelProtocol.swift in Sources */,
 				786FC33C22AFFA7A00112FB8 /* UIImageView+Animations.swift in Sources */,
 				786FC2DF22AFA02B00112FB8 /* HitCollectionViewCell.swift in Sources */,
+				7894A43822D102DE004896FE /* HitsCoordinatorProtocol.swift in Sources */,
 				786FC31E22AFA91D00112FB8 /* UIColor+Hex.swift in Sources */,
 				78A344B722AA254B00AD8A17 /* AppDelegate.swift in Sources */,
 				78CFF21122B5957D00FCD919 /* UIViewController+StoryboardInstance.swift in Sources */,

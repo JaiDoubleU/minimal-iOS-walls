@@ -12,7 +12,7 @@ import MySampleAPI
 
 protocol HitsViewModelProtocol {
 	var interactor: HitsInteractorProtocol { get }
-	var coordinator: CoordinatorProtocol { get }
+	var coordinator: HitsCoordinatorProtocol { get }
 	
 	var title: String { get }
 	var listData: Observable<[Hit]> { get }
@@ -22,5 +22,7 @@ protocol HitsViewModelProtocol {
 	func fetchHits()
 	func numberOfItems() -> Int
 	func numberOfSections() -> Int
-	func viewModelForItem(at indexPath: IndexPath) -> HitCollectionCellViewModelProtocol
+	func data(forRowAt index: IndexPath) -> HitCollectionCellViewModelProtocol
+	func showHit(forRowAt index: IndexPath)
+	func finish()
 }

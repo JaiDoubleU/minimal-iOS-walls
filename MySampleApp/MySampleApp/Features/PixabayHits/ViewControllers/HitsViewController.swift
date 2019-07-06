@@ -88,7 +88,7 @@ extension HitsViewController: UICollectionViewDataSource {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HitCollectionViewCell.reuseIdentifier, for: indexPath) as! HitCollectionViewCell
 		
 		// prepares the collection view model and pass it to the cell
-		if let collectionViewModel = viewModel?.viewModelForItem(at: indexPath) {
+		if let collectionViewModel = viewModel?.data(forRowAt: indexPath) {
 			cell.configure( viewModel: collectionViewModel)
 		}
 		

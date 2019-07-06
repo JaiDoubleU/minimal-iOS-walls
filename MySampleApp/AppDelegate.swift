@@ -11,16 +11,22 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	
-	var appCoordinator: AppCoordinator?
+	var window: UIWindow?
 	static var shared = AppDelegate() // Declare a static variable as an instance of AppDelegate
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// AppCoordinator (router)
-		appCoordinator = AppCoordinator(UIWindow())
-		appCoordinator?.start()
+		
+		// App theme
+		ThemeManager.applyTheme()
+		
+		window = UIWindow(frame: UIScreen.main.bounds)
+		window?.backgroundColor = UIColor.white
+		window?.rootViewController = AppCoordinator.presentHits()
+		window?.makeKeyAndVisible()
 		
 		return true
 	}
+	
 
 }
 

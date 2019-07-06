@@ -14,7 +14,7 @@ import MySampleAPI
 final internal class HitsViewModel: HitsViewModelProtocol {
 	
 	private (set) var interactor: HitsInteractorProtocol
-	private (set) var coordinator: CoordinatorProtocol
+	private (set) var coordinator: HitsCoordinatorProtocol
 	
 	private (set) var listData = Observable<[Hit]>([])
 	private (set) var error = Observable<Error?>(nil)
@@ -25,7 +25,7 @@ final internal class HitsViewModel: HitsViewModelProtocol {
 	/// - Parameters:
 	///   - interactor: hits model
 	///   - coordinator: instance of the coordinator
-	init(interactor: HitsInteractorProtocol, coordinator: CoordinatorProtocol) {
+	init(interactor: HitsInteractorProtocol, coordinator: HitsCoordinatorProtocol) {
 		self.interactor = interactor
 		self.coordinator = coordinator
 	}
@@ -47,7 +47,7 @@ final internal class HitsViewModel: HitsViewModelProtocol {
 				self?.listData.value = models
 			case .failure(let error):
 				self?.error.value = error
-			}
+			}						
 		})
 	}
 	
@@ -67,11 +67,16 @@ final internal class HitsViewModel: HitsViewModelProtocol {
 	
 	/// Returns the item at the specified index path.
 	///
-	/// - Parameter indexPath: The index path locating the item in the list.
-	/// - Returns: An object representing an item of the list.
-	func viewModelForItem(at indexPath: IndexPath) -> HitCollectionCellViewModelProtocol {
-		let model = listData.value[indexPath.row]
+	/// - Parameter forRowAt: The index path locating the item in the list.
+	/// - Returns: A view model representing an item of the list.
+	func data(forRowAt index: IndexPath) -> HitCollectionCellViewModelProtocol {
+		let model = listData.value[index.row]
 		return HitCollectionCellViewModel(interactor: HitsInteractor(getFromUrl: model.largeImageURL), model: model)
+	}
+	
+	func showHit(forRowAt index: IndexPath) {
+		let hit = listData.value[index.row]
+		coordinator.present(hit: hit)
 	}
 	
 	/// Dimiss action, it notifices teh coordinator when we are finished

@@ -85,11 +85,10 @@ class HitsInteractorTests: XCTestCase {
 		wait(for: [expectation], timeout: 3.0)
 	}
 	
-	func test_fetchHits_withNoata() {
+	func test_fetchHits_withNoData() {
 		let expectation = XCTestExpectation(description: "Shouldn't return data")
 		
-		let session = MockURLSession()
-		let service = MockPixabayNetworkService(session: session, networkModel: defaultNetworkModel)
+		let service = MockPixabayNetworkService(session: MockURLSession(), networkModel: defaultNetworkModel)
 		let hitsInteractor = HitsInteractor(service)
 		hitsInteractor.fetchHits { (result) in
 			switch result {
