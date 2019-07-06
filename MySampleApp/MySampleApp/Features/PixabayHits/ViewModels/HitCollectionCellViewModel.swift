@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import MySampleAPI
 
 /// HitCollectionCellViewModel contains presentation logic for preparing data to be shown by the CellView
 struct HitCollectionCellViewModel: HitCollectionCellViewModelProtocol {
 	
+	private (set) var interactor: HitsInteractorProtocol
 	private (set) var model: Hit
 	
 	var titleText: String {
 		return "\(model.id)"
 	}
 	
-	var imageUrl: String {
+	var imageIdentifier: String {
 		return model.previewURL
 	}
 	
@@ -25,7 +27,8 @@ struct HitCollectionCellViewModel: HitCollectionCellViewModelProtocol {
 		return UIImage(named: "imagePlaceholder")
 	}
 	
-	init(model: Hit) {
+	init(interactor: HitsInteractorProtocol, model: Hit) {
+		self.interactor = interactor
 		self.model = model
 	}
 	

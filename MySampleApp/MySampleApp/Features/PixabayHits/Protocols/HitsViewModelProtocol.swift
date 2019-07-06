@@ -8,6 +8,7 @@
 
 import Foundation
 import Bond
+import MySampleAPI
 
 protocol HitsViewModelProtocol {
 	var interactor: HitsInteractorProtocol { get }

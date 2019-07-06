@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MySampleAPI
 
 /// AppCoordinator has the responsibility of handling the navigate between screens and create new calçots where needed
 final class AppCoordinator: CoordinatorProtocol {

@@ -89,7 +89,7 @@ extension HitsViewController: UICollectionViewDataSource {
 		
 		// prepares the collection view model and pass it to the cell
 		if let collectionViewModel = viewModel?.viewModelForItem(at: indexPath) {
-			cell.configure(viewModel: collectionViewModel)
+			cell.configure( viewModel: collectionViewModel)
 		}
 		
 		return cell

@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import MySampleAPI
 
 protocol HitCollectionCellViewModelProtocol {
+	var interactor: HitsInteractorProtocol { get }
 	var model: Hit { get }
 	var titleText: String { get }
-	var imageUrl: String { get }
+	var imageIdentifier: String { get }
 	var placeHolderImage: UIImage? { get }
 }

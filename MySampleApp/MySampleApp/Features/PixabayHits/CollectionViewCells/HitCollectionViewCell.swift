@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MySampleAPI
 
 /// Simple Collection View Cell that shows and image and a label with information about the hit image model
 final internal class HitCollectionViewCell: UICollectionViewCell {
@@ -48,9 +49,8 @@ final internal class HitCollectionViewCell: UICollectionViewCell {
 		hitLabel.text = viewModel.titleText
 		
 		// starts downloading the image
-		hitImageView.downloadImage(urlString: viewModel.imageUrl, placeHolder: viewModel.placeHolderImage, completionHandler: nil)
+		hitImageView.downloadImage(interactor: viewModel.interactor, imageIdentifier: viewModel.imageIdentifier, completionHandler: nil)
 	}
-	
 	
 	/// Tap recognizer
 	///

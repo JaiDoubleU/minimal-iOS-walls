@@ -8,7 +8,7 @@
 
 import Foundation
 import Bond
-import ReactiveKit
+import MySampleAPI
 
 /// HitsViewModels contains presentation logic for preparing data to be shown by the View
 final internal class HitsViewModel: HitsViewModelProtocol {
@@ -71,7 +71,7 @@ final internal class HitsViewModel: HitsViewModelProtocol {
 	/// - Returns: An object representing an item of the list.
 	func viewModelForItem(at indexPath: IndexPath) -> HitCollectionCellViewModelProtocol {
 		let model = listData.value[indexPath.row]
-		return HitCollectionCellViewModel(model: model)
+		return HitCollectionCellViewModel(interactor: HitsInteractor(getFromUrl: model.largeImageURL), model: model)
 	}
 	
 	/// Dimiss action, it notifices teh coordinator when we are finished
@@ -79,4 +79,3 @@ final internal class HitsViewModel: HitsViewModelProtocol {
 		coordinator.finish()
 	}
 }
-

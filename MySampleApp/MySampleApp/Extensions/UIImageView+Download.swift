@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MySampleAPI
 // NSCache this is just for this basic app. in a real app we should have a better approach
 let imageCache = NSCache<NSString, UIImage>()
 
@@ -19,53 +19,36 @@ extension UIImageView {
 	/// download images and save it in a NSCache
 	///
 	/// - Parameters:
-	///   - urlSession: URLSessionProtocol
-	///   - urlString: where your image is hosted i.e. http://google.com'myimage.jpg
+	///   - interactor: HitsInteractorProtocol
+	///   - imageIdentifier: imageIdentifier
 	///   - placeHolder: this image will be shown as a place holder while you image is been downloaded
 	///   - completionHandler: return a DownloadImageCompleteHandler type (Result<UIImage, NetworkError>)
-	func downloadImage(urlSession: URLSessionProtocol = URLSession(configuration: URLSessionConfiguration.default),
-					   urlString: String,
+	func downloadImage(interactor: HitsInteractorProtocol,
+					   imageIdentifier: String,
 					   placeHolder: UIImage? = nil,
-					   completionHandler: DownloadImageCompleteHandler?)  {
-		
-		// converts string to url
-		guard let url = URL(string: urlString) else {
-			// bad url
-			completionHandler?(.failure(NetworkError.badURL))
-			return
-		}
-		
+					   completionHandler: DownloadImageCompleteHandler?) {
 		// establishing the place holder image to the imageview
 		image = placeHolder ?? nil
 		
 		// try to load teh image from cache
-		if let imageFromCache = imageCache.object(forKey: urlString as NSString) {
+		if let imageFromCache = imageCache.object(forKey: imageIdentifier as NSString) {
 			// image found
 			animateTransition(to: imageFromCache)
 			completionHandler?(.success(imageFromCache))
 		}
 		
-		// image not found, downlaod it.
-		urlSession.dataTask(with: URLRequest(url: url)) { [weak self] (data, response, error) in
-			
-			if let error = error {
-				completionHandler?(.failure(.apiError(error: error)))
-			} else if let data = data {
+		interactor.downloadImage { [weak self] (result) in
+			switch result {
+			case .success(let image):
 				DispatchQueue.main.async {
-					
-					// save image to cache
-					if let imageToCache = UIImage(data: data) {
-						imageCache.setObject(imageToCache, forKey: urlString as NSString)
-						
-						// display image
-						self?.animateTransition(to: imageToCache)
-						completionHandler?(.success(imageToCache))
-					}
+					imageCache.setObject(image, forKey: imageIdentifier as NSString)
+					// display image
+					self?.animateTransition(to: image)
+					completionHandler?(.success(image))
 				}
-			} else {
-				// no data
-				completionHandler?(.failure(NetworkError.emptyData))
+			case .failure(let error):
+				completionHandler?(.failure(.apiError(error: error)))
 			}
-		}.resume() // start task
+		}
 	}
 }
