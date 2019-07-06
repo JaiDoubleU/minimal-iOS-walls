@@ -10,5 +10,5 @@ import Foundation
 
 public protocol HitsInteractorProtocol {
 	func fetchHits(_ completionHandler: @escaping (Result<[Hit], NetworkError>) -> Void)
-	func downloadImage(_ completionHandler: @escaping ((Result<UIImage, NetworkError>) -> Void))
+	func downloadImage(_ completionHandler: @escaping ((Result<Data, NetworkError>) -> Void))
 }

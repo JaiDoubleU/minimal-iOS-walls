@@ -38,7 +38,6 @@
 		786FC33E22AFFB5900112FB8 /* ThemeManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC33D22AFFB5900112FB8 /* ThemeManager+Extensions.swift */; };
 		786FC34222AFFCF700112FB8 /* ThemeManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FC34122AFFCF600112FB8 /* ThemeManagerProtocol.swift */; };
 		7894A3AB22CFE30F004896FE /* MySampleAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7894A3A222CFE30E004896FE /* MySampleAPI.framework */; };
-		7894A3B422CFE30F004896FE /* MySampleAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7894A3A422CFE30F004896FE /* MySampleAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7894A3D822CFE366004896FE /* NetworkHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3C022CFE365004896FE /* NetworkHeaders.swift */; };
 		7894A3D922CFE366004896FE /* PixabayHitsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3C122CFE365004896FE /* PixabayHitsResponseModel.swift */; };
 		7894A3DA22CFE366004896FE /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3C222CFE365004896FE /* NetworkModel.swift */; };
@@ -54,21 +53,22 @@
 		7894A3E722CFE366004896FE /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3D422CFE366004896FE /* URLSessionProtocol.swift */; };
 		7894A3E822CFE366004896FE /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3D522CFE366004896FE /* URLSessionDataTaskProtocol.swift */; };
 		7894A3E922CFE366004896FE /* PixabayNetworkServiceConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3D722CFE366004896FE /* PixabayNetworkServiceConsts.swift */; };
-		7894A3EA22CFE68B004896FE /* MySampleAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7894A3A222CFE30E004896FE /* MySampleAPI.framework */; };
-		7894A3EB22CFE68B004896FE /* MySampleAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7894A3A222CFE30E004896FE /* MySampleAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7894A3F122CFE7FD004896FE /* HitsIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3F022CFE7FC004896FE /* HitsIterator.swift */; };
 		7894A3F322CFE8EF004896FE /* HitsInteratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3F222CFE8EF004896FE /* HitsInteratorProtocol.swift */; };
 		7894A3F822CFF519004896FE /* NSURLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3F622CFF519004896FE /* NSURLSession+Extensions.swift */; };
 		7894A3FA22CFF535004896FE /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3F922CFF535004896FE /* UIImageView+Download.swift */; };
 		7894A40622D0620E004896FE /* PixabayHitsResponseModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 7894A3FD22D0620E004896FE /* PixabayHitsResponseModel.json */; };
-		7894A40822D0620E004896FE /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A3FF22D0620E004896FE /* MockURLSession.swift */; };
-		7894A40922D0620E004896FE /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A40022D0620E004896FE /* MockURLSessionDataTask.swift */; };
-		7894A40A22D0620E004896FE /* MockPixabayNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A40122D0620E004896FE /* MockPixabayNetworkService.swift */; };
 		7894A40B22D0620E004896FE /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A40222D0620E004896FE /* NetworkManagerTests.swift */; };
 		7894A40C22D0620E004896FE /* PixabayNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A40322D0620E004896FE /* PixabayNetworkServiceTests.swift */; };
 		7894A40F22D0628B004896FE /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A40E22D0628B004896FE /* MockCoordinator.swift */; };
 		7894A41322D0D2FC004896FE /* HitsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A41222D0D2FC004896FE /* HitsInteractorTests.swift */; };
 		7894A41522D0F13A004896FE /* MockImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7894A41422D0F139004896FE /* MockImage.png */; };
+		7894A42122D0F496004896FE /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A41E22D0F496004896FE /* MockURLSession.swift */; };
+		7894A42222D0F496004896FE /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A41F22D0F496004896FE /* MockURLSessionDataTask.swift */; };
+		7894A42322D0F496004896FE /* MockPixabayNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894A42022D0F496004896FE /* MockPixabayNetworkService.swift */; };
+		7894A42522D0F513004896FE /* PixabayHitsResponseModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 7894A42422D0F513004896FE /* PixabayHitsResponseModel.json */; };
+		7894A42A22D0F7D0004896FE /* MySampleAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7894A3A222CFE30E004896FE /* MySampleAPI.framework */; };
+		7894A42B22D0F7D0004896FE /* MySampleAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7894A3A222CFE30E004896FE /* MySampleAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		78A344B722AA254B00AD8A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A344B622AA254B00AD8A17 /* AppDelegate.swift */; };
 		78A344BC22AA254B00AD8A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BA22AA254B00AD8A17 /* Main.storyboard */; };
 		78A344BE22AA255100AD8A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A344BD22AA255100AD8A17 /* Assets.xcassets */; };
@@ -93,7 +93,7 @@
 			remoteGlobalIDString = 78A344B222AA254B00AD8A17;
 			remoteInfo = MySampleApp;
 		};
-		7894A3EC22CFE68B004896FE /* PBXContainerItemProxy */ = {
+		7894A42C22D0F7D0004896FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78A344AB22AA254B00AD8A17 /* Project object */;
 			proxyType = 1;
@@ -110,13 +110,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7894A3EE22CFE68B004896FE /* Embed Frameworks */ = {
+		7894A42E22D0F7D0004896FE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7894A3EB22CFE68B004896FE /* MySampleAPI.framework in Embed Frameworks */,
+				7894A42B22D0F7D0004896FE /* MySampleAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,8 +157,6 @@
 		786FC33D22AFFB5900112FB8 /* ThemeManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThemeManager+Extensions.swift"; sourceTree = "<group>"; };
 		786FC34122AFFCF600112FB8 /* ThemeManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManagerProtocol.swift; sourceTree = "<group>"; };
 		7894A3A222CFE30E004896FE /* MySampleAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MySampleAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7894A3A422CFE30F004896FE /* MySampleAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySampleAPI.h; sourceTree = "<group>"; };
-		7894A3A522CFE30F004896FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7894A3AA22CFE30F004896FE /* MySampleAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySampleAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7894A3B322CFE30F004896FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7894A3C022CFE365004896FE /* NetworkHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHeaders.swift; sourceTree = "<group>"; };
@@ -181,14 +179,17 @@
 		7894A3F622CFF519004896FE /* NSURLSession+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSession+Extensions.swift"; sourceTree = "<group>"; };
 		7894A3F922CFF535004896FE /* UIImageView+Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
 		7894A3FD22D0620E004896FE /* PixabayHitsResponseModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PixabayHitsResponseModel.json; sourceTree = "<group>"; };
-		7894A3FF22D0620E004896FE /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
-		7894A40022D0620E004896FE /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
-		7894A40122D0620E004896FE /* MockPixabayNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPixabayNetworkService.swift; sourceTree = "<group>"; };
 		7894A40222D0620E004896FE /* NetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		7894A40322D0620E004896FE /* PixabayNetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixabayNetworkServiceTests.swift; sourceTree = "<group>"; };
 		7894A40E22D0628B004896FE /* MockCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockCoordinator.swift; path = MySampleAppTests/MockCoordinator.swift; sourceTree = SOURCE_ROOT; };
 		7894A41222D0D2FC004896FE /* HitsInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitsInteractorTests.swift; sourceTree = "<group>"; };
 		7894A41422D0F139004896FE /* MockImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MockImage.png; sourceTree = "<group>"; };
+		7894A41E22D0F496004896FE /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		7894A41F22D0F496004896FE /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		7894A42022D0F496004896FE /* MockPixabayNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPixabayNetworkService.swift; sourceTree = "<group>"; };
+		7894A42422D0F513004896FE /* PixabayHitsResponseModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PixabayHitsResponseModel.json; path = MySampleAppTests/PixabayHitsResponseModel.json; sourceTree = SOURCE_ROOT; };
+		7894A42622D0F5B7004896FE /* MySampleAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySampleAPI.h; path = MySampleAPI/MySampleAPI/MySampleAPI.h; sourceTree = "<group>"; };
+		7894A42722D0F5B7004896FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MySampleAPI/MySampleAPI/Info.plist; sourceTree = "<group>"; };
 		78A344B322AA254B00AD8A17 /* MySampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A344B622AA254B00AD8A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A344BB22AA254B00AD8A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -223,7 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A403EB348B0A330C472730E4 /* Pods_MySampleApp.framework in Frameworks */,
-				7894A3EA22CFE68B004896FE /* MySampleAPI.framework in Frameworks */,
+				7894A42A22D0F7D0004896FE /* MySampleAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,16 +421,15 @@
 		7894A3A322CFE30F004896FE /* MySampleAPI */ = {
 			isa = PBXGroup;
 			children = (
-				7894A3F422CFF519004896FE /* Extensions */,
-				7894A3EF22CFE7FC004896FE /* Interators */,
 				7894A3D622CFE366004896FE /* Constants */,
 				7894A3C322CFE366004896FE /* Enums */,
+				7894A3F422CFF519004896FE /* Extensions */,
+				7894A3EF22CFE7FC004896FE /* Interators */,
+				7894A41D22D0F496004896FE /* Mocks */,
 				7894A3BF22CFE365004896FE /* Models */,
 				7894A3CD22CFE366004896FE /* Parsers */,
 				7894A3CF22CFE366004896FE /* Protocols */,
 				7894A3C622CFE366004896FE /* Services */,
-				7894A3A422CFE30F004896FE /* MySampleAPI.h */,
-				7894A3A522CFE30F004896FE /* Info.plist */,
 			);
 			path = MySampleAPI;
 			sourceTree = "<group>";
@@ -533,11 +533,19 @@
 			children = (
 				7894A41422D0F139004896FE /* MockImage.png */,
 				7894A3FD22D0620E004896FE /* PixabayHitsResponseModel.json */,
-				7894A3FF22D0620E004896FE /* MockURLSession.swift */,
-				7894A40022D0620E004896FE /* MockURLSessionDataTask.swift */,
-				7894A40122D0620E004896FE /* MockPixabayNetworkService.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7894A41D22D0F496004896FE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7894A41E22D0F496004896FE /* MockURLSession.swift */,
+				7894A41F22D0F496004896FE /* MockURLSessionDataTask.swift */,
+				7894A42022D0F496004896FE /* MockPixabayNetworkService.swift */,
+			);
+			name = Mocks;
+			path = MySampleAPI/Mocks;
 			sourceTree = "<group>";
 		};
 		78A344AA22AA254B00AD8A17 = {
@@ -548,6 +556,8 @@
 				78A344B622AA254B00AD8A17 /* AppDelegate.swift */,
 				78D7B72322AB962B007D1752 /* MySampleAppTests */,
 				7894A3A322CFE30F004896FE /* MySampleAPI */,
+				7894A42722D0F5B7004896FE /* Info.plist */,
+				7894A42622D0F5B7004896FE /* MySampleAPI.h */,
 				7894A3B022CFE30F004896FE /* MySampleAPITests */,
 				78A344B422AA254B00AD8A17 /* Products */,
 				625EFB0ED15B2ACB800B6851 /* Pods */,
@@ -584,6 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				7894A40E22D0628B004896FE /* MockCoordinator.swift */,
+				7894A42422D0F513004896FE /* PixabayHitsResponseModel.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -606,7 +617,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7894A3B422CFE30F004896FE /* MySampleAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,12 +669,12 @@
 				78A344B022AA254B00AD8A17 /* Frameworks */,
 				78A344B122AA254B00AD8A17 /* Resources */,
 				8B5C396E64D08A92757FEB0A /* [CP] Embed Pods Frameworks */,
-				7894A3EE22CFE68B004896FE /* Embed Frameworks */,
+				7894A42E22D0F7D0004896FE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7894A3ED22CFE68B004896FE /* PBXTargetDependency */,
+				7894A42D22D0F7D0004896FE /* PBXTargetDependency */,
 			);
 			name = MySampleApp;
 			productName = MySampleApp;
@@ -768,6 +778,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7894A42522D0F513004896FE /* PixabayHitsResponseModel.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +841,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7894A3E222CFE366004896FE /* Data+Codable.swift in Sources */,
+				7894A42222D0F496004896FE /* MockURLSessionDataTask.swift in Sources */,
 				7894A3DB22CFE366004896FE /* HTTPMethod.swift in Sources */,
 				7894A3DA22CFE366004896FE /* NetworkModel.swift in Sources */,
 				7894A3E422CFE366004896FE /* PixabayNetworkServiceProtocol.swift in Sources */,
@@ -845,8 +857,10 @@
 				7894A3DF22CFE366004896FE /* PixabayNetworkService.swift in Sources */,
 				7894A3E722CFE366004896FE /* URLSessionProtocol.swift in Sources */,
 				7894A3F822CFF519004896FE /* NSURLSession+Extensions.swift in Sources */,
+				7894A42122D0F496004896FE /* MockURLSession.swift in Sources */,
 				7894A3E322CFE366004896FE /* NetworkModelProtocol.swift in Sources */,
 				7894A3E622CFE366004896FE /* NetworkManagerProtocol.swift in Sources */,
+				7894A42322D0F496004896FE /* MockPixabayNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,12 +868,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7894A40822D0620E004896FE /* MockURLSession.swift in Sources */,
 				7894A41322D0D2FC004896FE /* HitsInteractorTests.swift in Sources */,
-				7894A40922D0620E004896FE /* MockURLSessionDataTask.swift in Sources */,
 				7894A40B22D0620E004896FE /* NetworkManagerTests.swift in Sources */,
 				7894A40C22D0620E004896FE /* PixabayNetworkServiceTests.swift in Sources */,
-				7894A40A22D0620E004896FE /* MockPixabayNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,10 +935,10 @@
 			target = 78A344B222AA254B00AD8A17 /* MySampleApp */;
 			targetProxy = 7894A3AE22CFE30F004896FE /* PBXContainerItemProxy */;
 		};
-		7894A3ED22CFE68B004896FE /* PBXTargetDependency */ = {
+		7894A42D22D0F7D0004896FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7894A3A122CFE30E004896FE /* MySampleAPI */;
-			targetProxy = 7894A3EC22CFE68B004896FE /* PBXContainerItemProxy */;
+			targetProxy = 7894A42C22D0F7D0004896FE /* PBXContainerItemProxy */;
 		};
 		78D7B72822AB962C007D1752 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -967,7 +978,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MySampleAPI/Info.plist;
+				INFOPLIST_FILE = MySampleAPI/MySampleAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -996,7 +1007,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MySampleAPI/Info.plist;
+				INFOPLIST_FILE = MySampleAPI/MySampleAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-@testable import MySampleAPI
 
 class MockPixabayNetworkService: PixabayNetworkServiceProtocol {
 	
@@ -38,7 +37,7 @@ class MockPixabayNetworkService: PixabayNetworkServiceProtocol {
 		pixabayNetworkService.decode(data: data, completionHandler: completionHandler)
 	}
 	
-	func downloadImage(_ completionHandler: @escaping ((Result<UIImage, NetworkError>) -> Void)) {
+	func downloadImage(_ completionHandler: @escaping ((Result<Data, NetworkError>) -> Void)) {
 		pixabayNetworkService.downloadImage(completionHandler)
 	}
 

@@ -40,8 +40,8 @@ public struct HitsInteractor: HitsInteractorProtocol {
 		
 	/// downloadImage
 	///
-	/// - Parameter completionHandler: returns the downloaded image
-	public func downloadImage(_ completionHandler: @escaping ((Result<UIImage, NetworkError>) -> Void)) {
+	/// - Parameter completionHandler: returns the downloaded image as Data
+	public func downloadImage(_ completionHandler: @escaping ((Result<Data, NetworkError>) -> Void)) {
 		dataService.downloadImage(completionHandler)
 	}
 }

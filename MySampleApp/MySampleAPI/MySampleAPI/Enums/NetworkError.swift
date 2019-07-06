@@ -18,7 +18,7 @@ public enum NetworkError: Error {
 	case badURL
 	case unknownError
 	case emptyData
-	case dataToImageError
+	case badData
 	case apiError(error: Error)
 }
 
@@ -38,10 +38,10 @@ extension NetworkError: LocalizedError {
 			return "Unknown error, please try again"
 		case .emptyData:
 			return "Error: did not receive data"
+		case .badData:
+			return "Error: bad data"
 		case .apiError:
 			return "Error: did receive an error from the API"
-		case .dataToImageError:
-			return "There was an error converting to image object"
 		}
 	}
 }

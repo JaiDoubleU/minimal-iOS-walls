@@ -8,7 +8,6 @@
 
 import Foundation
 
-@testable import MySampleAPI
 
 class MockURLSessionDataTask: URLSessionDataTaskProtocol {
 	private (set) var resumeWasCalled = false

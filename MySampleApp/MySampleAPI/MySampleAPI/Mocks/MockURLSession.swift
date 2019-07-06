@@ -8,8 +8,6 @@
 
 import Foundation
 
-@testable import MySampleAPI
-
 //MARK: MOCK
 class MockURLSession: URLSessionProtocol {
 	

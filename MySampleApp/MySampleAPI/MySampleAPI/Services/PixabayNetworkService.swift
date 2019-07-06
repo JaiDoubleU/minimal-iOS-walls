@@ -48,15 +48,11 @@ public struct PixabayNetworkService: PixabayNetworkServiceProtocol {
 	/// downloads an image from the server
 	///
 	/// - Parameter completionHandler: returns Result<UIImage, NetworkError>
-	public func downloadImage(_ completionHandler: @escaping ((Result<UIImage, NetworkError>) -> Void)) {
+	public func downloadImage(_ completionHandler: @escaping ((Result<Data, NetworkError>) -> Void)) {
 		networkManager.execute { (result) in
 			switch result {
 			case .success(let data):
-				if let image = UIImage(data: data) {
-					completionHandler(.success(image))
-				} else {
-					completionHandler(.failure(.dataToImageError))
-				}
+				completionHandler(.success(data))
 			case .failure(let error):
 				print(error.localizedDescription)
 				completionHandler(.failure(error))

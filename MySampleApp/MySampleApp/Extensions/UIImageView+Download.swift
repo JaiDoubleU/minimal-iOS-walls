@@ -8,6 +8,7 @@
 
 import UIKit
 import MySampleAPI
+
 // NSCache this is just for this basic app. in a real app we should have a better approach
 let imageCache = NSCache<NSString, UIImage>()
 
@@ -39,8 +40,13 @@ extension UIImageView {
 		
 		interactor.downloadImage { [weak self] (result) in
 			switch result {
-			case .success(let image):
+			case .success(let data):
 				DispatchQueue.main.async {
+					guard let image = UIImage(data: data) else {
+						completionHandler?(.failure(.badData))
+						return
+					}
+					
 					imageCache.setObject(image, forKey: imageIdentifier as NSString)
 					// display image
 					self?.animateTransition(to: image)
