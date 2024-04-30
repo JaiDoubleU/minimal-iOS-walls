@@ -1,8 +1,6 @@
 # MySampleApp
 
-This is just a sample app written in Swift 5. 
-
-This app uses 'Pixabay' open API, downloads a JSON file with 'Hit Images' and displays the items in a grid
+This is a simple wallpaper app written in Swift 5 that displays wallpaper inages in a grid
 
 It's meant as a sample project for showing a clean MVVM-C architecture and best practices
 
