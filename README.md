@@ -1,4 +1,4 @@
-# MySampleApp
+# Minimal iOS Wallpapers
 
 This is just a sample app written in Swift 5. 
 
