@@ -1,4 +1,4 @@
-# MySampleApp
+# Minimal iOS Wallpapers
 
 This is a simple wallpaper app written in Swift 5 that displays wallpaper inages in a grid
 
